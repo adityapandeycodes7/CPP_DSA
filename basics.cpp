@@ -135,23 +135,274 @@ int main () {
 //-----------------------> Check whether a number is Prime or not
 
 
+// int n;
+// cout<<"Enter the value of n: \n";
+// cin>> n;
+
+//     if (n <= 1) {
+//         cout << n << " is not a Prime number.";
+//         return 0;
+//     }
+
+// bool isPrime = true;
+// for(int i = 2; i*i<=n; i++){
+//     if ((n%i)==0){
+//      isPrime = false;
+//      break;
+//     }
+// }
+
+// if(isPrime == true){
+//     cout<<"Its a Prime Number";
+// }
+// else{
+//     cout<<"Its Not a Prime Number";
+// }
+
+
+
+
+//-----------------> Sum of all numbers from 1 to n which are divisible by 3
+
+// int n;
+// cout<<"Enter the value of n: \n";
+// cin>> n;
+// int sum = 0;
+// for(int i=1; i<=n; i++){
+//     if(i%3==0){
+//         sum = sum + i;
+//         cout<<i<<endl;
+//     }
+// }
+
+// cout<<"The sum of the numbers from 1 to "<<n <<" which are divisible by 3 is: "<<sum;
+
+
+
+
+//-----------------------> Print Factorial of a number n
+
+//  int n;
+// cout<<"Enter the value of n: \n";
+// cin>> n;
+// int mult = 1;
+// for(int i=1; i<=n; i++){
+//     mult = mult * i;
+// }
+
+// cout<<"Factorial of a number n is: " << mult;
+
+
+
+
+//-----------> nested Loops
+
+//----------> example 1
+//    int n;
+// cout<<"Enter the value of n: \n";
+// cin>> n;
+// for(int i=1; i<=n; i++){
+//     for(int m=1; m<=10; m++){
+//         cout<<"*";
+//     }
+//     cout<<endl;
+// }
+
+//----------> example 2 (Traingle Pattern)
+
+// int n;
+// cout<<"Enter the value of n: \n";
+// cin>> n;
+
+// for(int i=0; i<n; i++){
+//     for(int m=1; m<=i+1; m++){
+//         cout<<"*";
+//     }
+//     cout<<endl;
+// }
+
+
+
+
+//----------------> Print the Square Patterns
+
+//------> Pattern 1:
+
+// int n;
+// cout<<"Enter the value of n: ";
+// cin>> n;
+
+// int square = 1;
+// for(int i=1; i<=n; i++){
+//  for(int m=1; m<=n; m++){
+//      cout<<"* ";
+//  }
+
+//  cout<<endl;
+// }
+
+
+
+
+//--------> Pattern 2:
+
+// int n;
+// cout<<"Enter the value of n: ";
+// cin>> n;
+
+// int square = 1;
+// for(int i=1; i<=n; i++){
+//  for(int m=1; m<=n; m++){
+//      cout<<m<<" ";
+//  }
+
+//  cout<<endl;
+// }
+
+
+
+
+//---------> Pattern 3:
+
+// int n;
+// cout<<"Enter the value of n: ";
+// cin>> n;
+
+// int square = 1;
+// for(int i=1; i<=n; i++){
+//     char ch = 'A';
+//  for(int m=1; m<=n; m++){
+//      cout<< ch <<" ";
+//      ch++;
+//  }
+
+//  cout<<endl;
+// }
+
+
+
+
+//---------> Pattern 4:
+
+// int n;
+// cout<<"Enter the value of n: ";
+// cin>> n;
+
+// int count = 1;
+// for(int i=1; i<=n; i++){
+//  for(int m=1; m<=n; m++){
+//      cout<<count<<" ";
+//      count++;
+//  }
+
+//  cout<<endl;
+// }
+
+
+
+
+
+//----------------> Triange Pattern
+
+//---------> Pattern 1:
+
+// int n;
+// cout<<"Enter the value of n: ";
+// cin>> n;
+
+// for(int i=0; i<n; i++){
+//     for(int m=1; m<=i+1; m++){
+//         cout<<(i+1)<<" ";
+//     }
+//     cout<<endl;
+// }
+
+
+
+
+
+//----------> Pattern 2:
+
+// int n;
+// cout<<"Enter the value of n: ";
+// cin>> n;
+
+// char ch = 'A';
+// for(int i=0; i<n; i++){
+//     for(int m=1; m<=i+1; m++){
+//         cout<<ch<<" ";
+//     }
+//     ch++;
+//     cout<<endl;
+// }
+
+
+
+
+//---------> Pattern 3:
+
+// int n;
+// cout<<"Enter the value of n: ";
+// cin>> n;
+
+// for(int i=0; i<n; i++){
+//     for(int m=1; m<=i+1; m++){
+//         cout<<m<< " ";
+//     }
+//     cout<<endl;
+// }
+
+
+
+
+// Reverse Triangle Patter
+
+// int n;
+// cout<<"Enter the value of n: ";
+// cin>> n;
+
+// for(int i=0; i<n; i++){
+//     for(int m=i+1; m>=1; m--){
+//         cout<<(m) <<" ";
+//     }
+//     cout<<endl;
+// }
+
+
+
+
+//-----------------> Floyd,s Triangle Pattern:
+
+// int n;
+// cout<<"Enter the value of n: ";
+// cin>> n;
+// int count = 1;
+// for(int i=0; i<n; i++){
+//     for(int m=1; m<=i+1; m++){
+//         cout<<(count)<<" ";
+//         count++;
+//     }
+//     cout<<endl;
+// }
+
+
+
+
+//----------> Inverted Triangle Pattern:
 int n;
-cout<<"Enter the value of n: \n";
+cout<<"Enter the value of n: ";
 cin>> n;
 
-bool isPrime = true;
-for(int i = 2; i<n; i++){
-    if ((n%i)==0){
-     isPrime = false;
-     break;
+for(int i=0; i<n; i++){
+    int count = 1;
+    for(int m=0; m<i; m++){
+        cout<<" ";
     }
+    for(int j=0; j<n-i; j++){
+        cout<< i+1;
+    }
+    cout<<endl;
 }
 
-if(isPrime == true){
-    cout<<"Its a Prime Number";
-}
-else{
-    cout<<"Its Not a Prime Number";
-}
 return 0;
 }
