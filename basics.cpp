@@ -410,21 +410,45 @@ int main () {
 
 //------------> Pyramid Pattern:
 
-int n;
-cout<<"Enter the value of n: ";
-cin>> n;
-for(int i=0; i<n; i++){
 
-for(int j=0; j<n-i-1; j++){
-    cout<<" ";
-}
-    for(int j=1; j<=i+1; j++){
-        cout<< j;
+
+
+// int n;
+// cout<<"enter the value of n";
+// cin>>n;
+// for(int i = 1; i<=n; i++){
+//     for(int j = n-i; j>=1; j--){
+//         cout<<" ";
+//     }
+//     for(int k = 1; k<=i; k++){
+//         cout<<k;
+//     }
+//     for(int l = i-1; l>=1; l--){
+//         cout<<l;
+//     }
+//     cout<<endl;
+// }
+
+
+
+
+//---------------> Hollow Diamond Pattern:
+
+int n;
+cout<<"enter the value of n";
+cin>>n;
+
+ for(int i = 1; i<=n; i++){
+    for(int j = n/2 - i+1; j>=1; j--){
+        cout<<" ";
     }
-    for(int j=0; j>0; j--){
-    cout<< j;
+    for(int k = 1; k<=i; k++){
+        cout<<"*";
     }
-    cout<< endl;
+    // for(int l = i-1; l>=1; l--){
+    //     cout<<l;
+    // }
+    cout<<endl;
 }
 return 0;
 }
