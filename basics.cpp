@@ -434,21 +434,5 @@ int main () {
 
 //---------------> Hollow Diamond Pattern:
 
-int n;
-cout<<"enter the value of n";
-cin>>n;
-
- for(int i = 1; i<=n; i++){
-    for(int j = n/2 - i+1; j>=1; j--){
-        cout<<" ";
-    }
-    for(int k = 1; k<=i; k++){
-        cout<<"*";
-    }
-    // for(int l = i-1; l>=1; l--){
-    //     cout<<l;
-    // }
-    cout<<endl;
-}
 return 0;
 }
