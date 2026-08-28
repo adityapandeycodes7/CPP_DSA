@@ -4,6 +4,15 @@ using namespace std;
 // ------------------> NOTE :- <-----------------------
 //    Press "ctrl" + "/" to remove comments after selecting the topic you want to understand
 
+
+
+
+//___________________Functions definition
+
+int calArea(int a, int b){
+    cout<<"Area of Rectangle with length "<<a<<" and breadth "<<b<<" is : "<<a*b; 
+}
+
 int main () {
 
     //_______________Arithematic operations on a and b___________________
@@ -470,34 +479,36 @@ int main () {
 
 //------------------> Butterfly Pattern:
 
-int n = 4;
+// int n = 4;
 
-for(int i = 0; i<n; i++){
-    for(int j=0; j<=i; j++){
-        cout<<"*";
-    }
-    for(int j = 0; j < (2*n)-2-(2*i); j++){
-        cout<<" ";
-    }
-    for(int j=0; j<=i; j++){
-        cout<<"*";
-    }
-    cout<<endl;
-}
+// for(int i = 0; i<n; i++){
+//     for(int j=0; j<=i; j++){
+//         cout<<"*";
+//     }
+//     for(int j = 0; j < (2*n)-2-(2*i); j++){
+//         cout<<" ";
+//     }
+//     for(int j=0; j<=i; j++){
+//         cout<<"*";
+//     }
+//     cout<<endl;
+// }
 
-for(int i = 0; i<n; i++){
-    for(int j = 0; j<n-i; j++){
-        cout<<"*";
-    }
+// for(int i = 0; i<n; i++){
+//     for(int j = 0; j<n-i; j++){
+//         cout<<"*";
+//     }
 
-    for(int j = 0; j<2*i; j++){
-        cout<<" ";
-    }
-    for(int j = 0; j<n-i; j++){
-        cout<<"*";
-    }
-    cout<<endl;
-}
+//     for(int j = 0; j<2*i; j++){
+//         cout<<" ";
+//     }
+//     for(int j = 0; j<n-i; j++){
+//         cout<<"*";
+//     }
+//     cout<<endl;
+// }
+
+calArea(4,6);
 
 return 0;
 }
