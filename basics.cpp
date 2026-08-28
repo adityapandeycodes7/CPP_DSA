@@ -9,9 +9,13 @@ using namespace std;
 
 //___________________Functions definition
 
-int calArea(int a, int b){
-    cout<<"Area of Rectangle with length "<<a<<" and breadth "<<b<<" is : "<<a*b; 
-}
+// int calArea(int a, int b){// Parameters
+//     cout<<"Area of Rectangle with length "<<a<<" and breadth "<<b<<" is : "<<a*b<<endl; 
+// }
+
+// int printName(){
+//     cout<<"Aditya Pandey";
+// }
 
 int main () {
 
@@ -508,7 +512,7 @@ int main () {
 //     cout<<endl;
 // }
 
-calArea(4,6);
-
+// calArea(4,6); //Function calling / invoking
+// printName();
 return 0;
 }
