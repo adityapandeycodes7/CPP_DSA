@@ -9,15 +9,101 @@ using namespace std;
 
 //___________________Functions definition
 
+//---------------> Calculate the are of the Rectangle: 
+
 // int calArea(int a, int b){// Parameters
 //     cout<<"Area of Rectangle with length "<<a<<" and breadth "<<b<<" is : "<<a*b<<endl; 
 // }
+
+//---------------> Print Name:
 
 // int printName(){
 //     cout<<"Aditya Pandey";
 // }
 
+//----------------> Calculate the Sum of Two Numbers:
+
+// int sumOfTwo( double a, double b){
+//      cout<<"Sum is : "<< a+b; 
+// }
+
+//-----------------> Minimum of Two Numbers:
+
+//   int minOfTwo( int a, int b){
+//     if(a<b){
+//         cout<<a<<" is the Minimum number";
+//     }
+//     else{
+//         cout<<b<<" is the Minimum number";
+//     }
+//   }
+
+
+//------------------> Sum of 1 to N numbers;
+
+// void sumOfN(int n){
+//     int sum = 0;
+//  for(int i=1; i<=n; i++){
+//     sum = sum + i;
+//  }
+//  cout<<"Sum of Number from 1 to "<<n<<" is: "<<sum;
+// }
+
+//-------------------> Factorial of N:
+
+// void factN(int n){
+//     int fact = 1;
+//     for(int i = 1; i<=n; i++){
+//       fact = fact * i; 
+//     } 
+//     cout<<"The Factorial of the Number "<<n<<" is: "<<fact;
+// }
+
+//---------------> Pass by Value Example:
+
+// int change(int x){
+//     x = x*2;
+//     return x;
+// }
+
+//----------------> Calulate the sum of the digits of
+
+// int sumOfDigits(int n){
+//     int digit;
+//     int sum = 0;
+    
+    
+//     for(int i = 1; i = n>0; i++){
+//             digit = n%10;
+//             n = n/10;
+//             sum = sum + digit;
+//     }
+//     return(sum);
+// }
+
+//----------------> Calculate the nCr binomial binomial coefficient for n and r:
+// formula  = n!/[r!*(n-r)!]
+
+int binCoeff(int n, int r){
+int factN = 1;
+int factR = 1;
+int factNMR = 1;
+    for(int i = 1; i<=n; i++){
+    factN = factN*i;  //n!
+}
+   for(int i = 1; i<=r; i++){
+    factR = factR*i;  //r!
+}
+   for(int i = 1; i<=n-r; i++){
+    factNMR = factNMR*i;  //n-r!
+}
+
+int binCoef = (factN)/(factR * factNMR);
+return binCoef;
+}
+
 int main () {
+
 
     //_______________Arithematic operations on a and b___________________
 
@@ -512,7 +598,25 @@ int main () {
 //     cout<<endl;
 // }
 
-// calArea(4,6); //Function calling / invoking
+// calArea(4,6);                //Function calling / invoking
+
 // printName();
+
+// sumOfTwo(4,6);
+
+// minOfTwo(2,4);
+
+// sumOfN(4);
+
+// factN(4);
+
+//----------> Pass by Value:
+// int x = 5;
+// cout<<change(x)<<endl;
+// cout<<x;
+
+// cout<< sumOfDigits(44444)<<endl;
+
+cout<<binCoeff(6,4);
 return 0;
 }
