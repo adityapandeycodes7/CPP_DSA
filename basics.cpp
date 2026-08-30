@@ -84,22 +84,54 @@ using namespace std;
 //----------------> Calculate the nCr binomial binomial coefficient for n and r:
 // formula  = n!/[r!*(n-r)!]
 
-int binCoeff(int n, int r){
-int factN = 1;
-int factR = 1;
-int factNMR = 1;
-    for(int i = 1; i<=n; i++){
-    factN = factN*i;  //n!
-}
-   for(int i = 1; i<=r; i++){
-    factR = factR*i;  //r!
-}
-   for(int i = 1; i<=n-r; i++){
-    factNMR = factNMR*i;  //n-r!
-}
+// int binCoeff(int n, int r){
+// int factN = 1;
+// int factR = 1;
+// int factNMR = 1;
+//     for(int i = 1; i<=n; i++){
+//     factN = factN*i;  //n!
+// }
+//    for(int i = 1; i<=r; i++){
+//     factR = factR*i;  //r!
+// }
+//    for(int i = 1; i<=n-r; i++){
+//     factNMR = factNMR*i;  //n-r!
+// }
 
-int binCoef = (factN)/(factR * factNMR);
-return binCoef;
+// int binCoef = (factN)/(factR * factNMR);
+// return binCoef;
+// }
+
+
+//--------------> Convert the Decimal Number to the Binary:
+
+// int decToBin(int n){
+//  int bits;
+//  int sum = 0;
+//  int pow = 1;
+//     while(n>0){
+//         bits = n%2;
+//         n = n/2;
+//         sum = sum + (bits*pow);
+//         pow = pow * 10;
+//     }
+//     return sum;
+// }
+
+
+//----------------> Binary to decimal Conversion:
+
+int binToDec(int n){
+    int sum = 0;
+    int pow = 1;
+    int lBit;
+    while(n>0){
+        lBit = n%10;
+        n = n/10;
+        sum = sum + (lBit * pow);
+        pow = pow*2;
+    }
+    return sum;
 }
 
 int main () {
@@ -617,6 +649,12 @@ int main () {
 
 // cout<< sumOfDigits(44444)<<endl;
 
-cout<<binCoeff(6,4);
+// cout<<binCoeff(6,4);
+
+// for(int i = 0 ; i<100; i++){
+//     cout<<decToBin(i)<<endl;
+// }
+
+cout<<binToDec(1000);
 return 0;
 }
