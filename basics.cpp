@@ -661,27 +661,57 @@ int main () {
 
 
 
-//_________Bitwise Operators:
+// //_________Bitwise Operators:
 
-//---------> Bitwise AND (&):
+// //---------> Bitwise AND (&):
 
-int a = 4;
-int b = 6;
+// int a = 4;
+// int b = 6;
 
-cout<<(a & b)<<endl;
+// cout<<(a & b)<<endl;
 
-//----------> Bitwise OR (|):
-cout<<(a | b)<<endl;
+// //----------> Bitwise OR (|):
+// cout<<(a | b)<<endl;
 
-//----------> Bitwise XOR (^):
-cout<<(a ^ b)<<endl;
+// //----------> Bitwise XOR (^):
+// cout<<(a ^ b)<<endl;
 
-//----------> Bitwise Leftshift (<<):
-cout<<(a << 1)<<endl;
+// //----------> Bitwise Leftshift (<<):
+// cout<<(a << 1)<<endl;
 
-//----------> Bitwise Rightshift (>>):
-cout<<(a >> 1)<<endl;
+// //----------> Bitwise Rightshift (>>):
+// cout<<(a >> 1)<<endl;
 
+
+
+//-------------> Figure out how to find if a number is the power if 2 without using any loop:
+// int n;
+// cout<<"Enter the Number to Check if it is power of two or Not : ";
+// cin>>n;
+
+// if(n>0 && (n & (n-1)) == 0){
+//     cout<<n<<" is the Power of two";
+// }
+// else{
+//     cout<<n<<" is not the power of 2";
+// }
+
+
+
+//--------------> Write a Function to reverse the Number:
+
+int n;
+cout<<"Enter the Number: ";
+cin>>n;
+int sum = 0;
+int bit;
+int pow = 1;
+while(n>0){
+  bit = n % 10;
+  sum = (sum*10) + bit;
+  n = n/10;
+}
+cout<<sum;
 
 return 0;
 }
