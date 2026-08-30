@@ -121,18 +121,18 @@ using namespace std;
 
 //----------------> Binary to decimal Conversion:
 
-int binToDec(int n){
-    int sum = 0;
-    int pow = 1;
-    int lBit;
-    while(n>0){
-        lBit = n%10;
-        n = n/10;
-        sum = sum + (lBit * pow);
-        pow = pow*2;
-    }
-    return sum;
-}
+// int binToDec(int n){
+//     int sum = 0;
+//     int pow = 1;
+//     int lBit;
+//     while(n>0){
+//         lBit = n%10;
+//         n = n/10;
+//         sum = sum + (lBit * pow);
+//         pow = pow*2;
+//     }
+//     return sum;
+// }
 
 int main () {
 
@@ -655,6 +655,33 @@ int main () {
 //     cout<<decToBin(i)<<endl;
 // }
 
-cout<<binToDec(1000);
+// cout<<binToDec(1000);
+
+
+
+
+
+//_________Bitwise Operators:
+
+//---------> Bitwise AND (&):
+
+int a = 4;
+int b = 6;
+
+cout<<(a & b)<<endl;
+
+//----------> Bitwise OR (|):
+cout<<(a | b)<<endl;
+
+//----------> Bitwise XOR (^):
+cout<<(a ^ b)<<endl;
+
+//----------> Bitwise Leftshift (<<):
+cout<<(a << 1)<<endl;
+
+//----------> Bitwise Rightshift (>>):
+cout<<(a >> 1)<<endl;
+
+
 return 0;
 }
