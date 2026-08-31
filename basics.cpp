@@ -700,18 +700,52 @@ int main () {
 
 //--------------> Write a Function to reverse the Number:
 
-int n;
-cout<<"Enter the Number: ";
-cin>>n;
-int sum = 0;
-int bit;
-int pow = 1;
-while(n>0){
-  bit = n % 10;
-  sum = (sum*10) + bit;
-  n = n/10;
-}
-cout<<sum;
+// int n;
+// cout<<"Enter the Number: ";
+// cin>>n;
+// int sum = 0;
+// int bit;
+// int pow = 1;
+// while(n>0){
+//   bit = n % 10;
+//   sum = (sum*10) + bit;
+//   n = n/10;
+// }
+// cout<<sum;
 
+
+
+
+//__________Array:
+
+// int marks[5];
+// int size = sizeof(marks) / sizeof(int);
+
+// for(int i = 0; i<size; i++){
+//   cout<<"Enter the value of "<<i<<"th Index: ";
+//   cin>>marks[i];
+// }
+// for(int i = 0; i<size; i++){
+// cout<<marks[i]<<endl;
+// }
+
+//------------->Find the Smallest element of the array:
+int marks[5];
+int size = sizeof(marks) / sizeof(int);
+int smallest;
+for(int i = 0; i<size; i++){
+  cout<<"Enter the value of "<<i<<"th Index: ";
+  cin>>marks[i];
+}
+
+for(int i = 0; i<size; i++){
+  for(int j = 0; j<size; j++){
+    if(marks[j] < marks[i]){
+      smallest =  marks[j];
+    }
+  }
+
+}
+cout<<smallest<<endl;
 return 0;
 }
