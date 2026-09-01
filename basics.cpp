@@ -134,6 +134,28 @@ using namespace std;
 //     return sum;
 // }
 
+
+//----------------> Pass by reference:
+
+// void changeArray(int arr[], int size){
+//   cout<<"in the changeArray function: ";
+// for(int i = 0; i<size; i++){
+//   arr[i] = arr[i]*2;
+//   cout<<arr[i]<<" ";
+// }
+// cout<<endl;
+// }
+
+//-----------------> Linear Search Algorithm:
+int linearSearch(int arr[], int size, int target){
+  for(int i = 0; i<size; i++){
+  if(arr[i] == target){
+  return i;
+  }
+}
+return -1;
+}
+
 int main () {
 
 
@@ -763,15 +785,36 @@ int main () {
 
 //----------->TO find the maximum of Array:
 
-int marks[5] = {100, 87, 97, 98, 95};
-int size = sizeof(marks) / sizeof(int);
-int greatest = INT8_MIN;
-for(int i = 0; i<size; i++){
-  if(marks[i]>greatest){
-    greatest = marks[i];
-  }
-}
-cout<<greatest;
+// int marks[5] = {100, 87, 97, 98, 95};
+// int size = sizeof(marks) / sizeof(int);
+// int greatest = INT8_MIN;
+// int index;
+// for(int i = 0; i<size; i++){
+//   if(marks[i]>greatest){
+//     greatest = marks[i];
+//     index = i;
+//   }
+// }
+// cout<<"At the "<<index<<"th index: ";
+// cout<<greatest;
+
+
+//---------------->Pass by referance: Changes occurs at the original address(main):
+
+// int arr[] = {4,6,7,8};
+// int size = 4;
+// changeArray(arr, 4);
+// cout<<"in the main function: ";
+// for(int i = 0; i<size; i++){
+//   cout<<arr[i]<<" ";
+// }
+
+//-----------------> Linear Search Algorithm:
+
+int arr[] = {4,6,7,8,10,45,22,66};
+int size = sizeof(arr) / sizeof(int);
+int target = 66;
+cout<< linearSearch(arr, size, target);
 
 return 0;
 }
