@@ -730,22 +730,48 @@ int main () {
 // }
 
 //------------->Find the Smallest element of the array:
-int marks[5];
+// int marks[5];
+// int size = sizeof(marks) / sizeof(int);
+// int smallest;
+// for(int i = 0; i<size; i++){
+//   cout<<"Enter the value of "<<i<<"th Index: ";
+//   cin>>marks[i];
+// }
+
+// for(int i = 0; i<size; i++){
+//   for(int j = 0; j<size; j++){
+//     if(marks[j] < marks[i]){
+//       smallest =  marks[j];
+//     }
+//   }
+
+// }
+// cout<<smallest<<endl;
+
+// Another better way:
+
+// int marks[5] = {100, 87, 97, 98, 95};
+// int size = sizeof(marks) / sizeof(int);
+// int smallest = INT8_MAX;
+// for(int i = 0; i<size; i++){
+//   if(marks[i]<smallest){
+//     smallest = marks[i];
+//   }
+// }
+// cout<<smallest;
+
+
+//----------->TO find the maximum of Array:
+
+int marks[5] = {100, 87, 97, 98, 95};
 int size = sizeof(marks) / sizeof(int);
-int smallest;
+int greatest = INT8_MIN;
 for(int i = 0; i<size; i++){
-  cout<<"Enter the value of "<<i<<"th Index: ";
-  cin>>marks[i];
-}
-
-for(int i = 0; i<size; i++){
-  for(int j = 0; j<size; j++){
-    if(marks[j] < marks[i]){
-      smallest =  marks[j];
-    }
+  if(marks[i]>greatest){
+    greatest = marks[i];
   }
-
 }
-cout<<smallest<<endl;
+cout<<greatest;
+
 return 0;
 }
