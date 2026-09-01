@@ -147,14 +147,65 @@ using namespace std;
 // }
 
 //-----------------> Linear Search Algorithm:
-int linearSearch(int arr[], int size, int target){
-  for(int i = 0; i<size; i++){
-  if(arr[i] == target){
-  return i;
+// int linearSearch(int arr[], int size, int target){
+//   for(int i = 0; i<size; i++){
+//   if(arr[i] == target){
+//   return i;
+//   }
+// }
+// return -1;
+// }
+
+//-----------------> Reverse the Array:
+
+// void revArray(int arr[], int size){
+//   int start = 0;
+//   int end = size-1;
+//   while(start<end){
+//     swap(arr[start], arr[end]);
+//     start++;
+//     end--;
+//   }
+ 
+// }
+
+//------------------> WAF to calculate the sum and product of all numbers in an array:
+
+// void sumProductOfArray(int arr[], int size){
+// int sum = 0;
+// int product = 1;
+// for(int i = 0; i<size; i++){
+//   sum = sum + arr[i];
+//   product = product * arr[i];
+// }
+// cout<<"The Sum of all values in the Array is: "<<sum<<endl;
+// cout<<"The prroduct of all values in the Array is: "<<product<<endl;
+// }
+
+//-------------------> WAF to swap the maximum and minimum number of an array:
+
+void maxMinSwap(int arr[], int size){
+int smallest = INT8_MAX;
+int indexS;
+for(int i = 0; i<size; i++){
+  if(arr[i]<smallest){
+    smallest = arr[i];
+    indexS = i;
   }
 }
-return -1;
+int greatest = INT8_MIN;
+int indexG;
+for(int i = 0; i<size; i++){
+  if(arr[i]>greatest){
+    greatest = arr[i];
+    indexG = i;
+  }
 }
+
+swap(arr[indexG], arr[indexS]);
+
+}
+
 
 int main () {
 
@@ -811,10 +862,53 @@ int main () {
 
 //-----------------> Linear Search Algorithm:
 
+// int arr[] = {4,6,7,8,10,45,22,66};
+// int size = sizeof(arr) / sizeof(int);
+// int target = 66;
+// cout<< linearSearch(arr, size, target);
+
+
+//------------------> Reverse the Array:
+// int arr[] = {4,6,7,8,10,45,22,66};
+// int size = sizeof(arr) / sizeof(int);
+
+// cout<<"Original Array: ";
+// for(int i = 0; i<size; i++){
+//   cout<<arr[i]<<" ";
+// }
+// cout<<endl;
+// revArray(arr, size);
+ 
+//   cout<<"Reversed Array: ";
+//   for(int i = 0; i<size; i++){
+//   cout<<arr[i]<<" ";
+// }
+
+
+
+//------------------> WAF to calculate the sum and product of all numbers in an array:
+ 
+// int arr[] = {4,6};
+// int size = sizeof(arr) / sizeof(int);
+// sumProductOfArray(arr, size);
+
+
+
+//----------------------> WAF to swap the maximum and minimum number of an array:
+
 int arr[] = {4,6,7,8,10,45,22,66};
 int size = sizeof(arr) / sizeof(int);
-int target = 66;
-cout<< linearSearch(arr, size, target);
 
+cout<<"Original Array: ";
+for(int i = 0; i<size; i++){
+  cout<<arr[i]<<" ";
+}
+cout<<endl;
+maxMinSwap(arr, size);
+
+cout<<"Swapped Array: ";
+for(int i = 0; i<size; i++){
+  cout<<arr[i]<<" ";
+}
 return 0;
 }
