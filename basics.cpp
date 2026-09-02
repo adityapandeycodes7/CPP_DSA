@@ -184,28 +184,51 @@ using namespace std;
 
 //-------------------> WAF to swap the maximum and minimum number of an array:
 
-void maxMinSwap(int arr[], int size){
-int smallest = INT8_MAX;
-int indexS;
+// void maxMinSwap(int arr[], int size){
+// int smallest = INT8_MAX;
+// int indexS;
+// for(int i = 0; i<size; i++){
+//   if(arr[i]<smallest){
+//     smallest = arr[i];
+//     indexS = i;
+//   }
+// }
+// int greatest = INT8_MIN;
+// int indexG;
+// for(int i = 0; i<size; i++){
+//   if(arr[i]>greatest){
+//     greatest = arr[i];
+//     indexG = i;
+//   }
+// }
+
+// swap(arr[indexG], arr[indexS]);
+
+// }
+
+
+//---------------------> WAF to print all the unique values of an array:
+
+void uniqueValues(int arr[], int size){
+  bool checkUnique = false;
 for(int i = 0; i<size; i++){
-  if(arr[i]<smallest){
-    smallest = arr[i];
-    indexS = i;
+  bool isUnique = true;
+  for(int j = 0; j<size; j++){
+    if(arr[i] == arr[j] && (i != j)){
+     isUnique = false;
+     break;
+    }
+  }
+  if(isUnique){
+    cout<<arr[i]<<" is the Unique Number"<<endl;
+    checkUnique = true;
   }
 }
-int greatest = INT8_MIN;
-int indexG;
-for(int i = 0; i<size; i++){
-  if(arr[i]>greatest){
-    greatest = arr[i];
-    indexG = i;
-  }
+
+if(checkUnique == false){
+  cout<<"There is not any Unique Numbers present in the array";
 }
-
-swap(arr[indexG], arr[indexS]);
-
 }
-
 
 int main () {
 
@@ -896,19 +919,30 @@ int main () {
 
 //----------------------> WAF to swap the maximum and minimum number of an array:
 
-int arr[] = {4,6,7,8,10,45,22,66};
+// int arr[] = {4,6,7,8,10,45,22,66};
+// int size = sizeof(arr) / sizeof(int);
+
+// cout<<"Original Array: ";
+// for(int i = 0; i<size; i++){
+//   cout<<arr[i]<<" ";
+// }
+// cout<<endl;
+// maxMinSwap(arr, size);
+
+// cout<<"Swapped Array: ";
+// for(int i = 0; i<size; i++){
+//   cout<<arr[i]<<" ";
+// }
+
+
+
+
+//---------------------> WAF to print all the unique values of an array:
+
+int arr[] = {4,7,10,10};
 int size = sizeof(arr) / sizeof(int);
 
-cout<<"Original Array: ";
-for(int i = 0; i<size; i++){
-  cout<<arr[i]<<" ";
-}
-cout<<endl;
-maxMinSwap(arr, size);
+uniqueValues(arr, size);
 
-cout<<"Swapped Array: ";
-for(int i = 0; i<size; i++){
-  cout<<arr[i]<<" ";
-}
 return 0;
 }
