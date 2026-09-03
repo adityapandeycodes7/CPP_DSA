@@ -995,13 +995,34 @@ vector<int>vec = {1,2,3,4,5,6};
 
 //---------> vector functions:
 // cout<<vec.size()<<endl;
-vec.push_back(7);
+// vec.push_back(7);
 // cout<<vec.at(6)<<endl;
-vec.pop_back();
+// vec.pop_back();
 // cout<<vec.size()<<endl;
 // cout<<vec.front()<<endl;
 // cout<<vec.back()<<endl;
-cout<<vec.at(6)<<endl;
+// cout<<vec.at(6)<<endl;
+
+//----------> Vector dynamic allocation:
+
+// vector<int>vect;
+
+// vect.push_back(0);
+// vect.push_back(1);
+// vect.push_back(2);
+// vect.push_back(3);
+// vect.push_back(4);
+
+// cout<<vect.size()<<endl;
+// cout<<vect.capacity()<<endl;
+
+
+int arr[5] = {4,1,2,1,2};
+int unique = 0;
+for(int i = 0; i<5; i++){
+  unique = (unique ^ i);
+}
+cout<<unique;
 
 return 0;
 }
