@@ -984,7 +984,7 @@ int main () {
 //---------->Syntax:
 //vector<int>vec;
 //vector<int>vec(5,0);
-vector<int>vec = {1,2,3,4,5,6};
+// vector<int>vec = {1,2,3,4,5,6};
 
 //--------->For each loop:
 
@@ -1018,12 +1018,27 @@ vector<int>vec = {1,2,3,4,5,6};
 
 // Single Number Problem: 
 
-int arr[5] = {4,1,2,1,2};
-int unique = 0;
-for(int i = 0; i<5; i++){
-  unique = (unique ^ i);
-}
-cout<<unique;
+// int arr[5] = {4,1,2,1,2};
+// int unique = 0;
+// for(int i = 0; i<5; i++){
+//   unique = (unique ^ i);
+// }
+// cout<<unique;
+
+
+
+//--------------> Two sum Problem: (leetode 1) :
+
+vector<int>nums = {2,7,11,15};
+int target = 17;
+int size = nums.size();
+        for(int i = 0; i < size; i++){
+            for(int j = i+1; j < size; j++){
+                if((nums[i]+nums[j]) == target){
+                   cout<<i<<","<<j;
+                }
+            }
+        }
 
 return 0;
 }
