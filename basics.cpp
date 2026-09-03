@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -209,26 +210,45 @@ using namespace std;
 
 //---------------------> WAF to print all the unique values of an array:
 
-void uniqueValues(int arr[], int size){
-  bool checkUnique = false;
-for(int i = 0; i<size; i++){
-  bool isUnique = true;
-  for(int j = 0; j<size; j++){
-    if(arr[i] == arr[j] && (i != j)){
-     isUnique = false;
-     break;
-    }
-  }
-  if(isUnique){
-    cout<<arr[i]<<" is the Unique Number"<<endl;
-    checkUnique = true;
-  }
-}
+// void uniqueValues(int arr[], int size){
+//   bool checkUnique = false;
+// for(int i = 0; i<size; i++){
+//   bool isUnique = true;
+//   for(int j = 0; j<size; j++){
+//     if(arr[i] == arr[j] && (i != j)){
+//      isUnique = false;
+//      break;
+//     }
+//   }
+//   if(isUnique){
+//     cout<<arr[i]<<" is the Unique Number"<<endl;
+//     checkUnique = true;
+//   }
+// }
 
-if(checkUnique == false){
-  cout<<"There is not any Unique Numbers present in the array";
-}
-}
+// if(checkUnique == false){
+//   cout<<"There is not any Unique Numbers present in the array";
+// }
+// }
+
+
+
+//---------------> Write a function to print the intersection of two arrays:
+
+// int interTwoArr(int arr1[], int arr2[], int size1, int size2){
+//   bool null = true;
+//   for(int i = 0; i<size1; i++){
+//     for(int j = 0; j<size2; j++){
+//       if(arr1[i] == arr2[j]){
+//         cout<<arr1[i]<<" ";
+//         null = false;
+//       }
+//     }
+//   }
+//   if(null){
+//     cout<<"Interesection is Null";
+//   }
+// }
 
 int main () {
 
@@ -939,10 +959,49 @@ int main () {
 
 //---------------------> WAF to print all the unique values of an array:
 
-int arr[] = {4,7,10,10};
-int size = sizeof(arr) / sizeof(int);
+// int arr[] = {4,7,10,10};
+// int size = sizeof(arr) / sizeof(int);
 
-uniqueValues(arr, size);
+// uniqueValues(arr, size);
+
+
+
+
+//---------------> Write a function to print the intersection of two arrays:
+// int arr1[] = {4,7,10,16};
+// int arr2[] = {2,7,8,16};
+// int size1 = sizeof(arr1) / sizeof(int);
+// int size2 = sizeof(arr2) / sizeof(int);
+
+// interTwoArr(arr1, arr2, size1, size2);
+
+
+
+
+
+//________________Vectors:
+
+//---------->Syntax:
+//vector<int>vec;
+//vector<int>vec(5,0);
+vector<int>vec = {1,2,3,4,5,6};
+
+//--------->For each loop:
+
+// for(int val : vec){
+//   cout<<val<<" ";     // Here i stores the value at that index not the index number
+// }
+
+
+//---------> vector functions:
+// cout<<vec.size()<<endl;
+vec.push_back(7);
+// cout<<vec.at(6)<<endl;
+vec.pop_back();
+// cout<<vec.size()<<endl;
+// cout<<vec.front()<<endl;
+// cout<<vec.back()<<endl;
+cout<<vec.at(6)<<endl;
 
 return 0;
 }
