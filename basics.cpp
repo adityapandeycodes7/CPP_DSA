@@ -1016,6 +1016,7 @@ vector<int>vec = {1,2,3,4,5,6};
 // cout<<vect.size()<<endl;
 // cout<<vect.capacity()<<endl;
 
+// Single Number Problem: 
 
 int arr[5] = {4,1,2,1,2};
 int unique = 0;
