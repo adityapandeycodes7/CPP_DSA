@@ -1045,17 +1045,33 @@ int main () {
 
 // Maximum subarray sum:
 
-int arr[6] = {1,2,3,4,5,6};
- int size = sizeof(arr) / sizeof(int);
- int maxSum = 0;
-for(int st = 0; st<size; st++){
-    int currSum = 0;
-for(int end = st; end<size; end++){
-   currSum = currSum + arr[end];
-   maxSum = max(currSum, maxSum);
-}
+// int arr[6] = {1,2,3,4,5,6};
+//  int size = sizeof(arr) / sizeof(int);
+//  int maxSum = 0;
+// for(int st = 0; st<size; st++){
+//     int currSum = 0;
+// for(int end = st; end<size; end++){
+//    currSum = currSum + arr[end];
+//    maxSum = max(currSum, maxSum);
+// }
+// }
+// cout<<maxSum;
+
+
+
+// By Kadane's Algorithm:
+
+int arr[7] = {3,-4,5,5,-1,7,8};
+int size = sizeof(arr) / sizeof(int);
+int currSum = 0;
+int maxSum = INT8_MIN;
+for(int i = 0; i<size; i++){
+    currSum += arr[i];
+    maxSum = max(currSum, maxSum);
+    if(currSum < 0){
+        currSum = 0;
+    }
 }
 cout<<maxSum;
-
 return 0;
 }
