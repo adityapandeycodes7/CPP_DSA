@@ -1016,7 +1016,7 @@ int main () {
 // cout<<vect.size()<<endl;
 // cout<<vect.capacity()<<endl;
 
-// Single Number Problem: 
+// Single Number Problem: (leetcode 136):
 
 // int arr[5] = {4,1,2,1,2};
 // int unique = 0;
@@ -1027,18 +1027,35 @@ int main () {
 
 
 
-//--------------> Two sum Problem: (leetode 1) :
+//--------------> Two sum Problem: (leetcode 1) :
 
-vector<int>nums = {2,7,11,15};
-int target = 17;
-int size = nums.size();
-        for(int i = 0; i < size; i++){
-            for(int j = i+1; j < size; j++){
-                if((nums[i]+nums[j]) == target){
-                   cout<<i<<","<<j;
-                }
-            }
-        }
+// vector<int>nums = {2,7,11,15};
+// int target = 17;
+// int size = nums.size();
+//         for(int i = 0; i < size; i++){
+//             for(int j = i+1; j < size; j++){
+//                 if((nums[i]+nums[j]) == target){
+//                    cout<<i<<","<<j;
+//                 }
+//             }
+//         }
+
+
+
+
+// Maximum subarray sum:
+
+int arr[6] = {1,2,3,4,5,6};
+ int size = sizeof(arr) / sizeof(int);
+ int maxSum = 0;
+for(int st = 0; st<size; st++){
+    int currSum = 0;
+for(int end = st; end<size; end++){
+   currSum = currSum + arr[end];
+   maxSum = max(currSum, maxSum);
+}
+}
+cout<<maxSum;
 
 return 0;
 }
