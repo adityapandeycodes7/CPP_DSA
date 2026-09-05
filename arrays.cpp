@@ -7,6 +7,13 @@ using namespace std;
 
 // Press "ctrl" + "/" to remove comments after selecting the topic you want to understand
 
+
+
+
+
+//-------------> Pair Sum (Brute Force Method):
+
+
 int main () {
 
 // Single Number Problem: (leetcode 136):
@@ -71,23 +78,27 @@ int main () {
 
 //------------------> Max pair Sum of an Array:
 
-int arr[6] = {1,4,6,2,3,5};
-int size = sizeof(arr) / sizeof(int);
-int maxSum = INT8_MIN;
-int currSum = 0;
-int p1,p2;
-for(int i = 0; i<size; i++){
-for(int j = i+1; j<size; j++){
-      currSum = arr[i] + arr[j];
-        if(currSum > maxSum){
-            maxSum = currSum;
-            p1 = i;
-            p2 = j;
-}
-}
-}
-cout<<"Max Sum Pair is: "<<maxSum<<" at Index: "<<p1<<" "<<p2<<endl;
+// int arr[6] = {1,4,6,2,3,5};
+// int size = sizeof(arr) / sizeof(int);
+// int maxSum = INT8_MIN;
+// int currSum = 0;
+// int p1,p2;
+// for(int i = 0; i<size; i++){
+// for(int j = i+1; j<size; j++){
+//       currSum = arr[i] + arr[j];
+//         if(currSum > maxSum){
+//             maxSum = currSum;
+//             p1 = i;
+//             p2 = j;
+// }
+// }
+// }
+// cout<<"Max Sum Pair is: "<<maxSum<<" at Index: "<<p1<<" "<<p2<<endl;
 
 
+//--------------> Another Brute Force Method: (Pair Sum):
+
+vector<int>nums = {1,4,6,2,3,5};
+int size = nums.size();
     return 0;
 }
