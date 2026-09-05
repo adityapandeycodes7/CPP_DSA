@@ -1059,19 +1059,43 @@ int main () {
 
 
 
-// By Kadane's Algorithm:
+//----------------> By Kadane's Algorithm: (Leetcode 53):
 
-int arr[7] = {3,-4,5,5,-1,7,8};
+// int arr[7] = {3,-4,5,5,-1,7,8};
+// int size = sizeof(arr) / sizeof(int);
+// int currSum = 0;
+// int maxSum = INT8_MIN;
+// for(int i = 0; i<size; i++){
+//     currSum += arr[i];
+//     maxSum = max(currSum, maxSum);
+//     if(currSum < 0){
+//         currSum = 0;
+//     }
+// }
+// cout<<maxSum;
+
+
+
+
+//------------------> Sum Pair:
+
+int arr[6] = {1,4,6,2,3,5};
 int size = sizeof(arr) / sizeof(int);
-int currSum = 0;
 int maxSum = INT8_MIN;
+int currSum = 0;
+int p1,p2;
 for(int i = 0; i<size; i++){
-    currSum += arr[i];
-    maxSum = max(currSum, maxSum);
-    if(currSum < 0){
-        currSum = 0;
-    }
+for(int j = i+1; j<size; j++){
+      currSum = arr[i] + arr[j];
+        if(currSum > maxSum){
+            maxSum = currSum;
+            p1 = i;
+            p2 = j;
 }
-cout<<maxSum;
+}
+}
+cout<<"Max Sum Pair is: "<<maxSum<<" at Index: "<<p1<<" "<<p2<<endl;
+
 return 0;
 }
+
