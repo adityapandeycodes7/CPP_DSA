@@ -1077,7 +1077,7 @@ int main () {
 
 
 
-//------------------> Sum Pair:
+//------------------> Max Sum of an Array:
 
 int arr[6] = {1,4,6,2,3,5};
 int size = sizeof(arr) / sizeof(int);
