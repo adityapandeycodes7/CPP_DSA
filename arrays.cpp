@@ -13,19 +13,46 @@ using namespace std;
 
 //-------------> Pair Sum (Brute Force Method):
 
-vector<int> pairSum(vector<int>nums, int size, int target){
- vector<int> ans;
-    for(int i = 0; i<size; i++){
-    for(int j = i+1; j<size; j++){
+// vector<int> pairSum(vector<int>nums, int size, int target){
+//  vector<int> ans;
+//     for(int i = 0; i<size; i++){
+//     for(int j = i+1; j<size; j++){
     
-    if(nums[i] + nums[j] == target){
-    ans.push_back(i);
-    ans.push_back(j);
-    return ans;
+//     if(nums[i] + nums[j] == target){
+//     ans.push_back(i);
+//     ans.push_back(j);
+//     return ans;
+//     }
+//     }
+//  }
+//  return ans;   
+// }
+
+
+
+
+//--------------> Pair Sum (by Optimized Method): [O(n)]:
+
+vector<int> pairSum(vector<int>nums, int size, int target){
+    int st = 0;
+    int end = size-1;
+ vector<int> ans;
+ 
+    while(st < end){
+        int pairSum = nums[st] + nums[end];
+        if(pairSum < target){
+        st++;
+        }
+       else if(pairSum > target){
+        end--;
     }
+    else{
+     ans.push_back(st);
+     ans.push_back(end);
+     return ans;
     }
- }
- return ans;   
+}
+return ans;
 }
 
 int main () {
@@ -112,11 +139,11 @@ int main () {
 
 //--------------> Another Brute Force Method: (Pair Sum):
 
-vector<int>nums = {1,4,6,2,3,5};
+vector<int>nums = {1,4,6,7,8,10};
 int size = nums.size();
 int target = 7;
-
+pairSum(nums, size, target);
 vector<int> ans = pairSum(nums, size, target);
-cout<<ans[0]<<", "<<ans[1]<<endl;
+cout<<ans[0]<<", "<<ans[1];
     return 0;
 }
