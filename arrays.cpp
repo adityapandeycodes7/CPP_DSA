@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
+#include <algorithm>
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -33,27 +35,27 @@ using namespace std;
 
 //--------------> Pair Sum (by Optimized Method): [O(n)]:
 
-vector<int> pairSum(vector<int>nums, int size, int target){
-    int st = 0;
-    int end = size-1;
- vector<int> ans;
+// vector<int> pairSum(vector<int>nums, int size, int target){
+//     int st = 0;
+//     int end = size-1;
+//  vector<int> ans;
  
-    while(st < end){
-        int pairSum = nums[st] + nums[end];
-        if(pairSum < target){
-        st++;
-        }
-       else if(pairSum > target){
-        end--;
-    }
-    else{
-     ans.push_back(st);
-     ans.push_back(end);
-     return ans;
-    }
-}
-return ans;
-}
+//     while(st < end){
+//         int pairSum = nums[st] + nums[end];
+//         if(pairSum < target){
+//         st++;
+//         }
+//        else if(pairSum > target){
+//         end--;
+//     }
+//     else{
+//      ans.push_back(st);
+//      ans.push_back(end);
+//      return ans;
+//     }
+// }
+// return ans;
+// }
 
 int main () {
 
@@ -139,11 +141,83 @@ int main () {
 
 //--------------> Another Brute Force Method: (Pair Sum):
 
-vector<int>nums = {1,4,6,7,8,10};
-int size = nums.size();
-int target = 7;
-pairSum(nums, size, target);
-vector<int> ans = pairSum(nums, size, target);
-cout<<ans[0]<<", "<<ans[1];
-    return 0;
+// vector<int>nums = {1,4,6,7,8,10};
+// int size = nums.size();
+// int target = 7;
+// pairSum(nums, size, target);
+// vector<int> ans = pairSum(nums, size, target);
+// cout<<ans[0]<<", "<<ans[1];
+    
+
+
+
+//---------------> Majority Element: (Leetcode 169)- By Brute force method:
+
+// vector<int>nums = {1,2,1,2,2,2};
+
+// int size = nums.size();
+//         int moreThan = floor(size/2);
+//         int ans;
+//         for(int i = 0; i<size; i++){
+//             int count = 0;
+//             for(int j = i; j<size; j++){
+//                 if (nums[i] == nums[j]){
+//                     count++;
+//                 }
+//             }
+//             if(count > moreThan){
+//              ans = nums[i];
+//             }
+//         }
+//         cout<<"The Majority Element is: "<<ans; 
+
+
+
+//---------------> Majority Element: (Optimized Solution)
+
+// vector<int>nums = {1,2,2,1,2,2};
+// int size = nums.size();
+// int moreThan = floor(size/2);
+// int ans;
+
+// sort(nums.begin(), nums.end());
+
+// int freq = 1;
+// for(int i = 0; i<size; i++){
+//     if(nums[i] == nums[i-1]){
+//         freq++;
+//     }
+//     else{
+//         freq = 1;
+//     }
+//     if(freq > moreThan){
+//         ans = nums[i];
+//     }
+// }
+// cout<<ans;
+
+
+
+
+//---------------> Majority Element: (Moore's Voting Algorithm):
+
+vector<int>nums = {1,1,1,1,2,2};
+int freq = 0;
+int ans = 0;
+
+for(int i = 0; i<nums.size(); i++){
+    if(freq == 0){
+        ans = nums[i];
+    }
+    if(ans == nums[i]){
+        freq++;
+    }
+    else{
+        freq--;
+    }
+}
+
+cout<<ans;
+
+return 0;
 }
