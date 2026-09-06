@@ -13,6 +13,20 @@ using namespace std;
 
 //-------------> Pair Sum (Brute Force Method):
 
+vector<int> pairSum(vector<int>nums, int size, int target){
+ vector<int> ans;
+    for(int i = 0; i<size; i++){
+    for(int j = i+1; j<size; j++){
+    
+    if(nums[i] + nums[j] == target){
+    ans.push_back(i);
+    ans.push_back(j);
+    return ans;
+    }
+    }
+ }
+ return ans;   
+}
 
 int main () {
 
@@ -100,5 +114,9 @@ int main () {
 
 vector<int>nums = {1,4,6,2,3,5};
 int size = nums.size();
+int target = 7;
+
+vector<int> ans = pairSum(nums, size, target);
+cout<<ans[0]<<", "<<ans[1]<<endl;
     return 0;
 }
