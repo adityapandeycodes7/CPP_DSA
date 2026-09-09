@@ -1017,6 +1017,18 @@ int main () {
 // cout<<vect.capacity()<<endl;
 
 
+
+
+// Time Complexity And Space Complexity:
+
+int arr[] = {1,2,4,5,6,7,10};
+int size = sizeof(arr) / sizeof(int); 
+int target = 7;
+for(int i = 0; i<size; i++){
+    if(arr[i] == target){
+        cout<<"Target is at the "<<i<<"th index";  // Here the time Complexity is O(n) because n times operation is getting performed
+    }
+}
 return 0;
 }
 
