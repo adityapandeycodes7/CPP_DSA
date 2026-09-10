@@ -1022,6 +1022,7 @@ int main () {
 // Time Complexity And Space Complexity:
 
 //-----------> Time Complexity:
+
 // int arr[] = {1,2,4,5,6,7,10};
 // int size = sizeof(arr) / sizeof(int); 
 // int target = 7;
@@ -1033,13 +1034,26 @@ int main () {
 
 
 //------------> Space Complexity:
+
+// int arr[] = {1,2,4,5,6,7,10};
+// int size = sizeof(arr) / sizeof(int); 
+// int sum = 0;
+// for(int i = 0; i<size; i++){
+//     sum += arr[i];
+// }
+// cout<< sum; // Here the Space complexity is O(k) or O(1)
+
+
 int arr[] = {1,2,4,5,6,7,10};
 int size = sizeof(arr) / sizeof(int); 
-int sum = 0;
-for(int i = 0; i<size; i++){
-    sum += arr[i];
-}
-cout<< sum; // Here the Space complexity is O(k) or O(1)
 
+int sqrArr[size];
+
+for(int i = 0; i<size; i++){
+    sqrArr[i] = arr[i] * arr[i];
+}
+for(int i = 0; i<size; i++){
+    cout<< sqrArr[i]; // Here the Space Complexity is O(n);
+}
 return 0;
 }
