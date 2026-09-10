@@ -1021,14 +1021,25 @@ int main () {
 
 // Time Complexity And Space Complexity:
 
+//-----------> Time Complexity:
+// int arr[] = {1,2,4,5,6,7,10};
+// int size = sizeof(arr) / sizeof(int); 
+// int target = 7;
+// for(int i = 0; i<size; i++){
+//     if(arr[i] == target){
+//         cout<<"Target is at the "<<i<<"th index";  // Here the time Complexity is O(n) because n times operation is getting performed
+//     }
+// }
+
+
+//------------> Space Complexity:
 int arr[] = {1,2,4,5,6,7,10};
 int size = sizeof(arr) / sizeof(int); 
-int target = 7;
+int sum = 0;
 for(int i = 0; i<size; i++){
-    if(arr[i] == target){
-        cout<<"Target is at the "<<i<<"th index";  // Here the time Complexity is O(n) because n times operation is getting performed
-    }
+    sum += arr[i];
 }
+cout<< sum; // Here the Space complexity is O(k) or O(1)
+
 return 0;
 }
-
