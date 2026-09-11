@@ -5,7 +5,7 @@ using namespace std;
 // ------------------> NOTE :- <-----------------------
 //    Press "ctrl" + "/" to remove comments after selecting the topic you want to understand
 
-
+// Go to int main() {Line No. 254} to Start from the basics 
 
 
 //___________________Functions definition
@@ -249,6 +249,7 @@ using namespace std;
 //     cout<<"Interesection is Null";
 //   }
 // }
+
 
 int main () {
 
@@ -1033,6 +1034,13 @@ int main () {
 // }
 
 
+//-------------> Sum of Numbers from 1 to n
+
+int n;
+cin>>n;
+int sum = n * (n+1)/2;
+cout<<sum;        // Here the Time complexity is Constant O(k) or O(1)
+
 //------------> Space Complexity:
 
 // int arr[] = {1,2,4,5,6,7,10};
@@ -1044,16 +1052,16 @@ int main () {
 // cout<< sum; // Here the Space complexity is O(k) or O(1)
 
 
-int arr[] = {1,2,4,5,6,7,10};
-int size = sizeof(arr) / sizeof(int); 
+// int arr[] = {1,2,4,5,6,7,10};
+// int size = sizeof(arr) / sizeof(int); 
 
-int sqrArr[size];
+// int sqrArr[size];
 
-for(int i = 0; i<size; i++){
-    sqrArr[i] = arr[i] * arr[i];
-}
-for(int i = 0; i<size; i++){
-    cout<< sqrArr[i]; // Here the Space Complexity is O(n);
-}
+// for(int i = 0; i<size; i++){
+//     sqrArr[i] = arr[i] * arr[i];
+// }
+// for(int i = 0; i<size; i++){
+//     cout<< sqrArr[i]; // Here the Space Complexity is O(n);
+// }
 return 0;
 }
