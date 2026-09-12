@@ -1036,10 +1036,25 @@ int main () {
 
 //-------------> Sum of Numbers from 1 to n
 
-int n;
-cin>>n;
-int sum = n * (n+1)/2;
-cout<<sum;        // Here the Time complexity is Constant O(k) or O(1)
+// int n;
+// cin>>n;
+// int sum = n * (n+1)/2;
+// cout<<sum;        // Here the Time complexity is Constant O(k) or O(1)
+
+
+//-------------> Ignore Constats:
+
+int arr[4] = {1,2,3,4};
+int n = sizeof(arr) / sizeof(int);
+for(int i = 0; i<n; i++){
+    arr[i] *= 2;
+    cout<<arr[i]<<" ";
+}
+cout<<endl;
+for(int i = 0; i<n; i++){  // Here Time Complexity = O(n+n) = O(2n) = O(n)
+    arr[i] += 2;
+    cout<<arr[i]<<" ";
+}
 
 //------------> Space Complexity:
 
