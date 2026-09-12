@@ -1042,7 +1042,7 @@ int main () {
 // cout<<sum;        // Here the Time complexity is Constant O(k) or O(1)
 
 
-//-------------> Ignore Constats:
+//-------------> Ignore Constants:
 
 int arr[4] = {1,2,3,4};
 int n = sizeof(arr) / sizeof(int);
