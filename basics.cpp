@@ -1061,11 +1061,24 @@ int main () {
 
 //-----------------> Caclculate Pow(x,n): (Leetcode 50):
 
-double x = 3; 
-int n = 8;
+double x = 4; 
+int n = 2;
 
-long binForm = n;
+// if(x == 0 && n > 0) cout<<"0"<<endl;
+// if(n == 0) cout<<"1"<<endl;
+// if(x == 1 && n > 0) cout<<"1"<<endl;
+// if(x == 0 && n > 0) cout<<"0"<<endl;
+// if(n == 1) cout<<x<<endl;
+// if(x == -1 && n%2 == 0) cout<<1.0<<endl;
+// if(x == -1 && n%2 != 0) cout<<-1.0<<endl;
+
 double ans = 1;
+long binForm = n;
+
+       if(binForm < 0){
+            x = 1/x;
+            binForm = -binForm;
+       }
 
 while(binForm > 0){
 if(binForm % 2 == 1){
