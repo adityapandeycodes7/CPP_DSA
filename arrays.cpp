@@ -260,7 +260,7 @@ int main () {
 
 //-----------------> Container with most water: (Leetcode 11):
 
-//----> Brute Force:
+//----> Brute Force: (Time Complexity = O(n^2))
 // vector<int>height = {1,8,6,2,5,4,8,3,7};
 // int size = height.size();
 // int maxArea = 0;
@@ -277,24 +277,45 @@ int main () {
 // cout<<maxArea;
 
 
-//------> Optimal Approach:
+//------> Optimal Approach: (Time Complexity = O(n))
 
-vector<int>height = {1,8,6,2,5,4,8,3,7};
-int size = height.size();
-int lp = 0;
-int rp = size-1;
-int maxArea = 0;
+// vector<int>height = {1,8,6,2,5,4,8,3,7};
+// int size = height.size();
+// int lp = 0;
+// int rp = size-1;
+// int maxArea = 0;
 
-while(lp < rp){
-    int length = min(height[lp], height[rp]);
-    int breadth = rp - lp;
-    int area = (length * breadth);
-    maxArea = max(maxArea, area);
+// while(lp < rp){
+//     int length = min(height[lp], height[rp]);
+//     int breadth = rp - lp;
+//     int area = (length * breadth);
+//     maxArea = max(maxArea, area);
 
-    height[lp]<height[rp] ? lp++ : rp--;
+//     height[lp]<height[rp] ? lp++ : rp--;
+// }
+
+// cout<< maxArea;
+
+
+
+
+
+//------------------->  Product of Array Except Self: (Leetcode 238):
+//------> Brute Force Approach:
+vector<int>nums = {1,2,3,4};
+int size = nums.size();
+vector<int>ans;
+
+for(int i = 0; i<size; i++){
+    int prod = 1;
+for(int j = 0; j<size; j++){
+   if(i != j){
+    prod *= nums[j];
+   }
 }
-
-cout<< maxArea;
+  ans.push_back(prod);
+  cout<<ans[i]<<" ";
+}
 
 return 0;
 }
