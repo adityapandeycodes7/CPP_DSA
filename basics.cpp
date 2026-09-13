@@ -1044,17 +1044,37 @@ int main () {
 
 //-------------> Ignore Constants:
 
-int arr[4] = {1,2,3,4};
-int n = sizeof(arr) / sizeof(int);
-for(int i = 0; i<n; i++){
-    arr[i] *= 2;
-    cout<<arr[i]<<" ";
+// int arr[4] = {1,2,3,4};
+// int n = sizeof(arr) / sizeof(int);
+// for(int i = 0; i<n; i++){
+//     arr[i] *= 2;
+//     cout<<arr[i]<<" ";
+// }
+// cout<<endl;
+// for(int i = 0; i<n; i++){  // Here Time Complexity = O(n+n) = O(2n) = O(n)
+//     arr[i] += 2;
+//     cout<<arr[i]<<" ";
+// }
+
+
+
+
+//-----------------> Caclculate Pow(x,n): (Leetcode 50):
+
+double x = 3; 
+int n = 8;
+
+long binForm = n;
+double ans = 1;
+
+while(binForm > 0){
+if(binForm % 2 == 1){
+    ans *= x;
 }
-cout<<endl;
-for(int i = 0; i<n; i++){  // Here Time Complexity = O(n+n) = O(2n) = O(n)
-    arr[i] += 2;
-    cout<<arr[i]<<" ";
+ x *= x;
+ binForm /= 2;
 }
+cout<<ans;
 
 //------------> Space Complexity:
 
