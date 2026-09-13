@@ -238,21 +238,42 @@ int main () {
 
 
 
-//--------------->Best Time to Buy and Sell Stock : (Leetcode 121):
+//---------------> Best Time to Buy and Sell Stock: (Leetcode 121):
 
-vector<int>prices = {7,1,5,3,6,4};
-int size = prices.size();
+// vector<int>prices = {7,1,5,3,6,4};
+// int size = prices.size();
 
-int sell;
-int maxProfit = 0;
-int bestBuy = prices[0];
+// int sell;
+// int maxProfit = 0;
+// int bestBuy = prices[0];
 
-for(int i = 1; i<size; i++){
-    if(prices[i] > bestBuy){
-     maxProfit = max(maxProfit, (prices[i] - bestBuy));
+// for(int i = 1; i<size; i++){
+//     if(prices[i] > bestBuy){
+//      maxProfit = max(maxProfit, (prices[i] - bestBuy));
+//     }
+// bestBuy = min(bestBuy, prices[i]);
+// }
+// cout<<maxProfit;
+
+
+
+
+//-----------------> Container with most water: (Leetcode 11):
+
+vector<int>height = {1,8,6,2,5,4,8,3,7};
+int size = height.size();
+int maxArea = 0;
+
+for(int i = 0; i<size; i++){
+
+    for(int j = i+1; j<size; j++){
+    int length = min(height[i], height[j]);
+    int breadth = j - i;
+    int area =  (length * breadth);
+    maxArea = max(maxArea, area);
     }
-bestBuy = min(bestBuy, prices[i]);
 }
-cout<<maxProfit;
+cout<<maxArea;
+
 return 0;
 }
