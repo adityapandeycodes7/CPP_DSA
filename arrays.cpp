@@ -225,15 +225,34 @@ int main () {
 
 //---------------> (Leetcode 1929):
 
-vector<int>nums = {1,2,3,4};
-vector<int>ans;
-int size = 2 * nums.size();
-for(int i = 0; i<size; i++){
-ans.push_back(nums[i % (size/2)]);
-}
-for(int i = 0; i<ans.size(); i++){
-    cout<<ans[i]<<" ";
-}
+// vector<int>nums = {1,2,3,4};
+// vector<int>ans;
+// int size = 2 * nums.size();
+// for(int i = 0; i<size; i++){
+// ans.push_back(nums[i % (size/2)]);
+// }
+// for(int i = 0; i<ans.size(); i++){
+//     cout<<ans[i]<<" ";
+// }
 
+
+
+
+//--------------->Best Time to Buy and Sell Stock : (Leetcode 121):
+
+vector<int>prices = {7,1,5,3,6,4};
+int size = prices.size();
+
+int sell;
+int maxProfit = 0;
+int bestBuy = prices[0];
+
+for(int i = 1; i<size; i++){
+    if(prices[i] > bestBuy){
+     maxProfit = max(maxProfit, (prices[i] - bestBuy));
+    }
+bestBuy = min(bestBuy, prices[i]);
+}
+cout<<maxProfit;
 return 0;
 }

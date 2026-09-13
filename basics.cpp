@@ -1064,14 +1064,6 @@ int main () {
 double x = 4; 
 int n = 2;
 
-// if(x == 0 && n > 0) cout<<"0"<<endl;
-// if(n == 0) cout<<"1"<<endl;
-// if(x == 1 && n > 0) cout<<"1"<<endl;
-// if(x == 0 && n > 0) cout<<"0"<<endl;
-// if(n == 1) cout<<x<<endl;
-// if(x == -1 && n%2 == 0) cout<<1.0<<endl;
-// if(x == -1 && n%2 != 0) cout<<-1.0<<endl;
-
 double ans = 1;
 long binForm = n;
 
