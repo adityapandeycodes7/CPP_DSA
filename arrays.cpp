@@ -260,20 +260,41 @@ int main () {
 
 //-----------------> Container with most water: (Leetcode 11):
 
+//----> Brute Force:
+// vector<int>height = {1,8,6,2,5,4,8,3,7};
+// int size = height.size();
+// int maxArea = 0;
+
+// for(int i = 0; i<size; i++){
+
+//     for(int j = i+1; j<size; j++){
+//     int length = min(height[i], height[j]);
+//     int breadth = j - i;
+//     int area =  (length * breadth);
+//     maxArea = max(maxArea, area);
+//     }
+// }
+// cout<<maxArea;
+
+
+//------> Optimal Approach:
+
 vector<int>height = {1,8,6,2,5,4,8,3,7};
 int size = height.size();
+int lp = 0;
+int rp = size-1;
 int maxArea = 0;
 
-for(int i = 0; i<size; i++){
-
-    for(int j = i+1; j<size; j++){
-    int length = min(height[i], height[j]);
-    int breadth = j - i;
-    int area =  (length * breadth);
+while(lp < rp){
+    int length = min(height[lp], height[rp]);
+    int breadth = rp - lp;
+    int area = (length * breadth);
     maxArea = max(maxArea, area);
-    }
+
+    height[lp]<height[rp] ? lp++ : rp--;
 }
-cout<<maxArea;
+
+cout<< maxArea;
 
 return 0;
 }
