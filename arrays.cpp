@@ -301,21 +301,50 @@ int main () {
 
 
 //------------------->  Product of Array Except Self: (Leetcode 238):
-//------> Brute Force Approach:
+//------> Brute Force Approach: (Time Complexity = O(n^2)):
+// vector<int>nums = {1,2,3,4};
+// int size = nums.size();
+// vector<int>ans;
+
+// for(int i = 0; i<size; i++){
+//     int prod = 1;
+// for(int j = 0; j<size; j++){
+//    if(i != j){
+//     prod *= nums[j];
+//    }
+// }
+//   ans.push_back(prod);
+//   cout<<ans[i]<<" ";
+// }
+
+
+
+
+//-------> Optimal Approach: (Time Complexity = O(n)):
 vector<int>nums = {1,2,3,4};
 int size = nums.size();
-vector<int>ans;
+vector<int>ans(size,1);
+vector<int>prefix(size,1);
+vector<int>suffix(size,1);
+
+// prefix[0] = 1;
+// suffix[size - 1] = 1;
+
+// int prefProd = 1;
+// int suffProd = 1;
+// int ansProd = 1;
+for(int i = 1; i<size; i++){ // prefix Arr
+
+  prefix[i] = prefix[i-1] * nums[i-1];
+}
+
+for(int i = size-2; i>=0; i--){ // suffix Arr
+suffix[i] = suffix[i+1] * nums[i+1];
+}
 
 for(int i = 0; i<size; i++){
-    int prod = 1;
-for(int j = 0; j<size; j++){
-   if(i != j){
-    prod *= nums[j];
-   }
-}
-  ans.push_back(prod);
+  ans[i] =  prefix[i] * suffix[i];
   cout<<ans[i]<<" ";
 }
-
 return 0;
 }
