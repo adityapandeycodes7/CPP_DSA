@@ -251,6 +251,12 @@ using namespace std;
 // }
 
 
+//----------> Pointers (Pass By Reference):
+
+void changeA(int* ptr){
+    *ptr = 20;
+}
+
 int main () {
 
 
@@ -1108,21 +1114,38 @@ int main () {
 
 
 //________________Pointers :
+// int a = 10;
+// int* ptr = &a;  // Here * refers that we are storing the address of some int variable
+
+// cout<< &a<<endl;
+// cout<< ptr<<endl;
+
+// //----------> Pointer to Pointer:
+// int** parPtr = &ptr;  // Here ** refers that we are storing the address of a pointer which already holds the address of some int variable
+
+// cout<< &ptr<<endl;
+// cout<< parPtr<<endl;
+
+// cout<< *(&a)<<endl;  // Here * acts as a dereferencing variable which extracts the value at the address of variable a
+// cout<< *(ptr)<<endl;
+// cout<< **(parPtr)<<endl;
+
+
+//------------> Null Pointer:
+// int* p = NULL;
+// cout<< *p;
+
+
+
+
+//------------> Pass By reference:
+
 int a = 10;
-int* ptr = &a;  // Here * refers that we are storing the address of some int variable
+cout<<"Initial value of a is: "<<a<<endl;
+changeA(&a);
 
-cout<< &a<<endl;
-cout<< ptr<<endl;
+cout<<"Changed value of a is: "<< a<<endl;
 
-//---------->Pointer to Pointer:
-int** parPtr = &ptr;  // Here ** refers that we are storing the address of a pointer which already holds the address of some int variable
-
-cout<< &ptr<<endl;
-cout<< parPtr<<endl;
-
-cout<< *(&a)<<endl;  // Here * acts as a dereferencing variable which extracts the value at the address of variable a
-cout<< *(ptr)<<endl;
-cout<< **(parPtr)<<endl;
 
 return 0;
 }
