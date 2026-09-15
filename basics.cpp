@@ -1061,25 +1061,25 @@ int main () {
 
 //-----------------> Caclculate Pow(x,n): (Leetcode 50):
 
-double x = 4; 
-int n = 2;
+// double x = 4; 
+// int n = 2;
 
-double ans = 1;
-long binForm = n;
+// double ans = 1;
+// long binForm = n;
 
-       if(binForm < 0){
-            x = 1/x;
-            binForm = -binForm;
-       }
+//        if(binForm < 0){
+//             x = 1/x;
+//             binForm = -binForm;
+//        }
 
-while(binForm > 0){
-if(binForm % 2 == 1){
-    ans *= x;
-}
- x *= x;
- binForm /= 2;
-}
-cout<<ans;
+// while(binForm > 0){
+// if(binForm % 2 == 1){
+//     ans *= x;
+// }
+//  x *= x;
+//  binForm /= 2;
+// }
+// cout<<ans;
 
 //------------> Space Complexity:
 
@@ -1103,5 +1103,26 @@ cout<<ans;
 // for(int i = 0; i<size; i++){
 //     cout<< sqrArr[i]; // Here the Space Complexity is O(n);
 // }
+
+
+
+
+//________________Pointers :
+int a = 10;
+int* ptr = &a;  // Here * refers that we are storing the address of some int variable
+
+cout<< &a<<endl;
+cout<< ptr<<endl;
+
+//---------->Pointer to Pointer:
+int** parPtr = &ptr;  // Here ** refers that we are storing the address of a pointer which already holds the address of some int variable
+
+cout<< &ptr<<endl;
+cout<< parPtr<<endl;
+
+cout<< *(&a)<<endl;  // Here * acts as a dereferencing variable which extracts the value at the address of variable a
+cout<< *(ptr)<<endl;
+cout<< **(parPtr)<<endl;
+
 return 0;
 }
