@@ -1174,25 +1174,38 @@ int main () {
 
 
 //----------> Pointer Arithematic:
-int a = 20;
-int* ptr = &a;
-cout<< ptr<<endl; //0x61ff08
+// int a = 20;
+// int* ptr = &a;
+// cout<< ptr<<endl; //0x61ff08
 
-ptr++; //increment
-cout<< ptr<<endl; //0x61ff0c
+// ptr++; //increment
+// cout<< ptr<<endl; //0x61ff0c
 
-ptr--; //decrement
-cout<< ptr<<endl; //0x61ff08
+// ptr--; //decrement
+// cout<< ptr<<endl; //0x61ff08
 
-ptr = ptr + 1; //Addition
-cout<< ptr<<endl; //0x61ff0c
+// ptr = ptr + 1; //Addition
+// cout<< ptr<<endl; //0x61ff0c
 
-ptr = ptr - 1; //Subtraction
-cout<< ptr<<endl; //0x61ff08
+// ptr = ptr - 1; //Subtraction
+// cout<< ptr<<endl; //0x61ff08
 
-int* ptr1 = ptr + 2; 
-cout<< ptr1 - ptr<<endl; //Subtract ptr
+// int* ptr1 = ptr + 2; 
+// cout<< ptr1 - ptr<<endl; //Subtract ptr
 
-cout<< (ptr1 > ptr) <<endl; //Pointer Comparistion
+// cout<< (ptr1 > ptr) <<endl; //Pointer Comparistion
+
+
+
+
+//-------------------> Predict the Output:
+
+int arr[] = {10,20,30,40};
+int *ptr = arr;
+
+cout<< *(ptr + 1)<<endl;  //20
+cout<< *(ptr + 3)<<endl;  //40
+ptr++;
+cout<< *ptr<<endl;  //20
 return 0;
 }
