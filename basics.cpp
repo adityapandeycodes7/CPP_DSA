@@ -253,9 +253,17 @@ using namespace std;
 
 //----------> Pointers (Pass By Reference):
 
-void changeA(int* ptr){
-    *ptr = 20;
+// void changeA(int* ptr){
+//     *ptr = 20;
+// }
+
+
+//----------> Pass by reference (Alias):
+
+void changeB(int &c){
+  c = 40;
 }
+
 
 int main () {
 
@@ -1138,14 +1146,18 @@ int main () {
 
 
 
-//------------> Pass By reference:
+//------------> Pass By reference: (pointer)
 
-int a = 10;
-cout<<"Initial value of a is: "<<a<<endl;
-changeA(&a);
+// int a = 10;
+// cout<<"Initial value of a is: "<<a<<endl;
+// changeA(&a);
+// cout<<"Changed value of a is: "<< a<<endl;
 
-cout<<"Changed value of a is: "<< a<<endl;
 
+int b = 20; 
+cout<<"Initial value of b is: "<<b<<endl;
+changeB(b);
+cout<<"Changed value of b is: "<<b<<endl;
 
 return 0;
 }
