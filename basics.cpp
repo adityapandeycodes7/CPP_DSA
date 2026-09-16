@@ -260,9 +260,9 @@ using namespace std;
 
 //----------> Pass by reference (Alias):
 
-void changeB(int &c){
-  c = 40;
-}
+// void changeB(int &c){
+//   c = 40;
+// }
 
 
 int main () {
@@ -1154,10 +1154,45 @@ int main () {
 // cout<<"Changed value of a is: "<< a<<endl;
 
 
-int b = 20; 
-cout<<"Initial value of b is: "<<b<<endl;
-changeB(b);
-cout<<"Changed value of b is: "<<b<<endl;
+// int b = 20; 
+// cout<<"Initial value of b is: "<<b<<endl;
+// changeB(b);
+// cout<<"Changed value of b is: "<<b<<endl;
 
+
+
+
+//------------> Array Pointers:
+
+// int arr[] = {1,2,3,4,5,6};
+
+// cout<< &arr<<endl;
+// cout<< &arr[0]<<endl;
+// cout<< *arr<<endl;
+// cout<< arr[0]<<endl;
+// cout<< &arr[1]<<endl;
+
+
+//----------> Pointer Arithematic:
+int a = 20;
+int* ptr = &a;
+cout<< ptr<<endl; //0x61ff08
+
+ptr++; //increment
+cout<< ptr<<endl; //0x61ff0c
+
+ptr--; //decrement
+cout<< ptr<<endl; //0x61ff08
+
+ptr = ptr + 1; //Addition
+cout<< ptr<<endl; //0x61ff0c
+
+ptr = ptr - 1; //Subtraction
+cout<< ptr<<endl; //0x61ff08
+
+int* ptr1 = ptr + 2; 
+cout<< ptr1 - ptr<<endl; //Subtract ptr
+
+cout<< (ptr1 > ptr) <<endl; //Pointer Comparistion
 return 0;
 }
