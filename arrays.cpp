@@ -344,23 +344,48 @@ int main () {
 
 
 //-------> Optimizing the space Complexity: O(1):
-vector<int>nums = {1,2,3,4};
-int size = nums.size();
-vector<int>ans(size,1);
+// vector<int>nums = {1,2,3,4};
+// int size = nums.size();
+// vector<int>ans(size,1);
 
- for(int i = 1; i<size; i++){ // prefix Arr
-  ans[i] = ans[i-1] * nums[i-1];
-}
+//  for(int i = 1; i<size; i++){ // prefix Arr
+//   ans[i] = ans[i-1] * nums[i-1];
+// }
 
-int suffix = 1;
+// int suffix = 1;
 
- for(int i = size-2; i>=0; i--){ // suffix Arr
-     suffix *= nums[i+1];
-  ans[i] *= suffix;
-}
+//  for(int i = size-2; i>=0; i--){ // suffix Arr
+//      suffix *= nums[i+1];
+//   ans[i] *= suffix;
+// }
 
-for(int i = 0; i<size; i++){ // ans Arr
-  cout<<ans[i]<<" ";
+// for(int i = 0; i<size; i++){ // ans Arr
+//   cout<<ans[i]<<" ";
+// }
+
+
+
+
+//---------------> Binary Search Algorithm:
+
+vector<int>arr = {2,4,6,8,10,12,14};
+int size = arr.size();
+int start = 0;
+int end = size-1;
+int target = 12;
+while(start <= end){
+  int mid = (start + end) / 2;
+  if(target < arr[mid]){
+    end = mid - 1;
+  }
+  else if(target > arr[mid]){
+    start = mid + 1;
+  }
+  else{
+    cout<<"Target is present at the index:"<< mid;
+    break;
+  }
+
 }
 
 return 0;
