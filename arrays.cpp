@@ -368,13 +368,13 @@ int main () {
 
 //---------------> Binary Search Algorithm:
 
-vector<int>arr = {2,4,6,8,10,12,14};
+vector<int>arr = {2,4,6,8,12,14};
 int size = arr.size();
 int start = 0;
 int end = size-1;
 int target = 12;
 while(start <= end){
-  int mid = (start + end) / 2;
+  int mid = start + (end - start) / 2;
   if(target < arr[mid]){
     end = mid - 1;
   }
@@ -382,7 +382,7 @@ while(start <= end){
     start = mid + 1;
   }
   else{
-    cout<<"Target is present at the index:"<< mid;
+    cout<<"Target is present at the index: "<< mid;
     break;
   }
 
