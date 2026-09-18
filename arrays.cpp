@@ -368,24 +368,57 @@ int main () {
 
 //---------------> Binary Search Algorithm:
 
-vector<int>arr = {2,4,6,8,12,14};
-int size = arr.size();
-int start = 0;
-int end = size-1;
-int target = 12;
+// vector<int>arr = {2,4,6,8,12,14};
+// int size = arr.size();
+// int start = 0;
+// int end = size-1;
+// int target = 12;
+// while(start <= end){
+//   int mid = start + (end - start) / 2;
+//   if(target < arr[mid]){
+//     end = mid - 1;
+//   }
+//   else if(target > arr[mid]){
+//     start = mid + 1;
+//   }
+//   else{
+//     cout<<"Target is present at the index: "<< mid;
+//     break;
+//   }
+
+// }
+
+
+
+
+//--------------> Search In Rotated Sorted Array: (leetcode 33):
+vector<int>A = {4,5,6,7,0,1,2};
+
+int size = A.size();
+int start = 0, end = size - 1;
+int target = 1;
 while(start <= end){
-  int mid = start + (end - start) / 2;
-  if(target < arr[mid]){
-    end = mid - 1;
-  }
-  else if(target > arr[mid]){
-    start = mid + 1;
-  }
-  else{
-    cout<<"Target is present at the index: "<< mid;
+  int mid = start + (end - start)/2;
+  if(A[mid] == target){
+    cout<< mid;
     break;
   }
 
+  if(A[start] <= A[mid]) {  //Left Sorted
+  if(A[start] <= target && target <= A[mid]){
+    end = mid - 1;
+  }
+  else{
+    start = mid + 1;
+  } 
+  } else{    //Right Sorted
+    if(A[mid] <= target && target <= A[end]){
+      start = mid + 1;
+    }
+    else {
+      end = mid - 1;
+    }
+  }
 }
 
 return 0;
