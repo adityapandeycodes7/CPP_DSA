@@ -392,39 +392,39 @@ int main () {
 
 
 //--------------> Search In Rotated Sorted Array: (leetcode 33):
-vector<int>A = {4,5,6,7,0,1,2};
+// vector<int>A = {4,5,6,7,0,1,2};
 
-int size = A.size();
-int start = 0, end = size - 1;
-int target = 1;
-bool found = false;
-while(start <= end){
-  int mid = start + (end - start)/2;
-  if(A[mid] == target){
-    cout<< mid;
-    found = true;
-    break;
-  }
+// int size = A.size();
+// int start = 0, end = size - 1;
+// int target = 1;
+// bool found = false;
+// while(start <= end){
+//   int mid = start + (end - start)/2;
+//   if(A[mid] == target){
+//     cout<< mid;
+//     found = true;
+//     break;
+//   }
 
-  if(A[start] <= A[mid]) {  //Left Sorted
-  if(A[start] <= target && target <= A[mid]){
-    end = mid - 1;
-  }
-  else{
-    start = mid + 1;
-  } 
-  } else{    //Right Sorted
-    if(A[mid] <= target && target <= A[end]){
-      start = mid + 1;
-    }
-    else {
-      end = mid - 1;
-    }
-  }
-}
+//   if(A[start] <= A[mid]) {  //Left Sorted
+//   if(A[start] <= target && target <= A[mid]){
+//     end = mid - 1;
+//   }
+//   else{
+//     start = mid + 1;
+//   } 
+//   } else{    //Right Sorted
+//     if(A[mid] <= target && target <= A[end]){
+//       start = mid + 1;
+//     }
+//     else {
+//       end = mid - 1;
+//     }
+//   }
+// }
 
-if(found == false){ // If the element is not found in the array
-  cout<<"The Element is not in the Array";
-}
+// if(found == false){ // If the element is not found in the array
+//   cout<<"The Element is not in the Array";
+// }
 return 0;
 }
