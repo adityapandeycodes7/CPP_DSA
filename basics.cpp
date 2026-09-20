@@ -1209,6 +1209,5 @@ int main () {
 // cout<< *ptr<<endl;  //20
 
 
-
 return 0;
 }
