@@ -434,7 +434,7 @@ int main () {
 //----->Brute Force Method: Time Complexity O(n):
 // vector<int>nums = {0,3,8,9,5,2};
 // int size = nums.size();
-// int peak = INT8_MIN;
+// int peak = INT8_MIN;  // INT_MIN
 // int index;
 // for(int i = 0; i<size; i++){
 //     if(nums[i] > peak){
@@ -445,5 +445,6 @@ int main () {
 // cout<<"Peak Element is: "<<peak<<" at Index: " <<index<<endl;
 
 // Optimised Solution:
+
 return 0;
 }
