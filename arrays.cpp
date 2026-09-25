@@ -430,7 +430,7 @@ int main () {
 
 
 
-//-----------------> Peak Index in Mountain array:
+//-----------------> Peak Index in Mountain array: (Leetcode 852):
 //----->Brute Force Method: Time Complexity O(n):
 // vector<int>nums = {0,3,8,9,5,2};
 // int size = nums.size();
@@ -450,8 +450,8 @@ int main () {
 
 vector<int>arr = {0,3,8,9,5,2};
 int size = arr.size();
-int start = 0;
-int end = size-1;
+int start = 1;
+int end = size-2;
 
 while(start <= end){
     int mid = start + (end - start)/2;
