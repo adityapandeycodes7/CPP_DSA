@@ -444,7 +444,31 @@ int main () {
 // }
 // cout<<"Peak Element is: "<<peak<<" at Index: " <<index<<endl;
 
-// Optimised Solution:
+
+
+//--------->Optimised Solution: Time Complexity O(log n):
+
+vector<int>arr = {0,3,8,9,5,2};
+int size = arr.size();
+int start = 0;
+int end = size-1;
+
+while(start <= end){
+    int mid = start + (end - start)/2;
+    
+    if(arr[mid] > arr[mid-1] && arr[mid] > arr[mid + 1]){
+        cout<< arr[mid];
+        break;
+    }
+
+    else if(arr[mid] > arr[mid - 1]){
+        start = mid + 1;
+    }
+    else{
+        end = mid - 1;
+        }
+}
+
 
 return 0;
 }
