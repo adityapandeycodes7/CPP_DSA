@@ -59,7 +59,7 @@ using namespace std;
 
 
 
-//--------> Book Allocation Problem: line(585)
+//--------> Book Allocation Problem:
 
 // bool isValid(vector<int> &arr, int n, int m, int maxAllowedPages){
 //      int students = 1, pages = 0;
@@ -112,50 +112,103 @@ using namespace std;
 
 //---------> Painter's Partition Problem: O{log(sum) * n} :
 
-bool isValid(vector<int> &arr, int n, int m, int maxAllowedTime){
-int painter = 1;
-int time = 0;
-for(int i = 0; i<n; i++){  //log(n)
+// bool isValid(vector<int> &arr, int n, int m, int maxAllowedTime){
+// int painter = 1;
+// int time = 0;
+// for(int i = 0; i<n; i++){  //log(n)
     
-        if(time + arr[i] <= maxAllowedTime){
-            time += arr[i];
-        }
-        else{
-            painter++;
-            time = arr[i];
-        }
-    }
+//         if(time + arr[i] <= maxAllowedTime){
+//             time += arr[i];
+//         }
+//         else{
+//             painter++;
+//             time = arr[i];
+//         }
+//     }
    
-    return painter <= m;
+//     return painter <= m;
+// }
+
+
+// int minTimeToPaint(vector<int> &arr, int n, int m){
+
+//     int sum = 0;
+//     int maximum = INT8_MIN;
+//     for(int i = 0; i<n; i++){
+//         sum += arr[i];
+//         maximum = max(maximum, arr[i]);
+//     }
+
+//     int start = maximum;
+//     int end = sum;
+//     int ans = -1;
+//     while(start <= end){  //log(sum)
+//         int mid = start + (end-start)/2;
+
+//         if(isValid(arr, n, m, mid)){
+//           ans = mid;
+//           end = mid - 1;
+//         }
+
+//         else{
+//             start = mid + 1;
+//         }
+//     }
+//     return ans;
+// }
+
+
+
+
+//-----------> Aggressive Cows Problem:
+
+bool isValid(vector<int>&arr, int n, int c, int minAllowedDistance){
+    
+    int cows = 1;
+    int lastStallPos = arr[0];
+    
+    for(int i = 1; i<n; i++){
+        if(arr[i] - lastStallPos >= minAllowedDistance){
+        cows++;
+        lastStallPos = arr[i];
+    }
+}
+if(cows == c){
+    return true;
+}
+else{
+    return false;
+}
 }
 
 
-int minTimeToPaint(vector<int> &arr, int n, int m){
-
-    int sum = 0;
-    int maximum = INT8_MIN;
-    for(int i = 0; i<n; i++){
-        sum += arr[i];
-        maximum = max(maximum, arr[i]);
-    }
-
-    int start = maximum;
-    int end = sum;
+int aggressiveCows(vector<int>&arr, int n, int c){
+    sort(arr.begin(), arr.end()); // O(n logn)
+    int maxValue = INT8_MIN;
     int ans = -1;
-    while(start <= end){  //log(sum)
+    for(int i = 0; i<n; i++){
+        maxValue = max(maxValue, arr[i]);
+    }
+    int start = 1; 
+    int end = maxValue - start;
+
+    while(start <= end){ // O((log Range) * n)
         int mid = start + (end-start)/2;
 
-        if(isValid(arr, n, m, mid)){
+        if(isValid(arr, n, c, mid)){
           ans = mid;
-          end = mid - 1;
+          start = mid + 1;
         }
-
         else{
-            start = mid + 1;
+            end = mid - 1;
         }
     }
     return ans;
 }
+
+
+
+
 
 
 int main () {
@@ -634,11 +687,21 @@ int main () {
 
 //---------> Painter's Partition problem:
 
-vector<int>arr = {40,30,10,20};
-int n = 4;
-int m = 2;
+// vector<int>arr = {40,30,10,20};
+// int n = 4;
+// int m = 2;
 
-cout<< minTimeToPaint(arr, n, m);
+// cout<< minTimeToPaint(arr, n, m);
 
+
+
+
+//-----------> Aggressive Cows Problem:
+
+vector<int>arr = {1,2,8,4,9};
+int n = arr.size();
+int c = 3;
+
+cout<<aggressiveCows(arr, n, c);
 return 0;
 }
