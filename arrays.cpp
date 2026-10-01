@@ -710,14 +710,18 @@ int main () {
 //______Sorting Algorithms:
 //------> Bubble Sort:
 
-vector<int>arr = {4,1,5,2,3};
+vector<int>arr = {1,2,3,4,5};
 int size = arr.size();
-
-for(int i = 0; i<size-1; i++){
+for(int i = 0; i<size-1; i++){  // Time complexity : O(n^2)
+    bool isSwap = false;
     for(int j = 0; j < (size-i-1); j++){
        if(arr[j] > arr[j+1]){
         swap(arr[j], arr[j+1]);
+        isSwap = true;
        }
+    }
+    if(!isSwap){
+      break;
     }
 }
 
