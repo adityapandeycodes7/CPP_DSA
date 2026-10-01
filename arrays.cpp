@@ -162,49 +162,49 @@ using namespace std;
 
 //-----------> Aggressive Cows Problem:
 
-bool isValid(vector<int>&arr, int n, int c, int minAllowedDistance){
+// bool isValid(vector<int>&arr, int n, int c, int minAllowedDistance){
     
-    int cows = 1;
-    int lastStallPos = arr[0];
+//     int cows = 1;
+//     int lastStallPos = arr[0];
     
-    for(int i = 1; i<n; i++){
-        if(arr[i] - lastStallPos >= minAllowedDistance){
-        cows++;
-        lastStallPos = arr[i];
-    }
-}
-if(cows == c){
-    return true;
-}
-else{
-    return false;
-}
-}
+//     for(int i = 1; i<n; i++){
+//         if(arr[i] - lastStallPos >= minAllowedDistance){
+//         cows++;
+//         lastStallPos = arr[i];
+//     }
+// }
+// if(cows == c){
+//     return true;
+// }
+// else{
+//     return false;
+// }
+// }
 
 
-int aggressiveCows(vector<int>&arr, int n, int c){
-    sort(arr.begin(), arr.end()); // O(n logn)
-    int maxValue = INT8_MIN;
-    int ans = -1;
-    for(int i = 0; i<n; i++){
-        maxValue = max(maxValue, arr[i]);
-    }
-    int start = 1; 
-    int end = maxValue - start;
+// int aggressiveCows(vector<int>&arr, int n, int c){
+//     sort(arr.begin(), arr.end()); // O(n logn)
+//     int maxValue = INT8_MIN;
+//     int ans = -1;
+//     for(int i = 0; i<n; i++){
+//         maxValue = max(maxValue, arr[i]);
+//     }
+//     int start = 1; 
+//     int end = maxValue - start;
 
-    while(start <= end){ // O((log Range) * n)
-        int mid = start + (end-start)/2;
+//     while(start <= end){ // O((log Range) * n)
+//         int mid = start + (end-start)/2;
 
-        if(isValid(arr, n, c, mid)){
-          ans = mid;
-          start = mid + 1;
-        }
-        else{
-            end = mid - 1;
-        }
-    }
-    return ans;
-}
+//         if(isValid(arr, n, c, mid)){
+//           ans = mid;
+//           start = mid + 1;
+//         }
+//         else{
+//             end = mid - 1;
+//         }
+//     }
+//     return ans;
+// }
 
 
 
@@ -698,10 +698,31 @@ int main () {
 
 //-----------> Aggressive Cows Problem:
 
-vector<int>arr = {1,2,8,4,9};
-int n = arr.size();
-int c = 3;
+// vector<int>arr = {1,2,8,4,9};
+// int n = arr.size();
+// int c = 3;
 
-cout<<aggressiveCows(arr, n, c);
+// cout<<aggressiveCows(arr, n, c);
+
+
+
+
+//______Sorting Algorithms:
+//------> Bubble Sort:
+
+vector<int>arr = {4,1,5,2,3};
+int size = arr.size();
+
+for(int i = 0; i<size-1; i++){
+    for(int j = 0; j < (size-i-1); j++){
+       if(arr[j] > arr[j+1]){
+        swap(arr[j], arr[j+1]);
+       }
+    }
+}
+
+for(int i = 0; i<size; i++){
+    cout<<arr[i]<<" ";
+}
 return 0;
 }
