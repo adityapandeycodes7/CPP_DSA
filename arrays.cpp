@@ -710,23 +710,48 @@ int main () {
 //______Sorting Algorithms:
 //------> Bubble Sort:
 
-vector<int>arr = {1,2,3,4,5};
+// vector<int>arr = {5,4,2,3,1};
+// int size = arr.size();
+// for(int i = 0; i<size-1; i++){  // Time complexity : O(n^2)
+//     bool isSwap = false;
+//     for(int j = 0; j < (size-i-1); j++){
+//        if(arr[j] > arr[j+1]){
+//         swap(arr[j], arr[j+1]);
+//         isSwap = true;
+//        }
+//     }
+//     if(!isSwap){
+//       break;
+//     }
+// }
+
+// for(int i = 0; i<size; i++){
+//     cout<<arr[i]<<" ";
+// }
+
+
+
+
+//---------> Selection Sort:
+
+vector<int>arr = {4,1,5,2,3};
 int size = arr.size();
-for(int i = 0; i<size-1; i++){  // Time complexity : O(n^2)
-    bool isSwap = false;
-    for(int j = 0; j < (size-i-1); j++){
-       if(arr[j] > arr[j+1]){
-        swap(arr[j], arr[j+1]);
-        isSwap = true;
-       }
+
+for(int i = 0; i<size-1; i++){
+    int smallestIdx = i;
+    for(int j = i+1; j<size; j++){
+        if(arr[j] < arr[smallestIdx]){
+           smallestIdx = j;
+        }
     }
-    if(!isSwap){
-      break;
-    }
+    swap(arr[i], arr[smallestIdx]);
 }
 
 for(int i = 0; i<size; i++){
     cout<<arr[i]<<" ";
 }
+
+
+
 return 0;
 }
