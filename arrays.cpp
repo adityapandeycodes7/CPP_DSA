@@ -740,7 +740,7 @@ int main () {
 // for(int i = 0; i<size-1; i++){
 //     int smallestIdx = i;
 //     for(int j = i+1; j<size; j++){
-//         if(arr[j] < arr[smallestIdx]){
+//         if(arr[j] < arr[smallestIdx]){  // Use > symbol to sort in the Decreasing Order
 //            smallestIdx = j;
 //         }
 //     }
@@ -756,23 +756,23 @@ int main () {
 
 //----------> Instertion Sort:
 
-vector<int>arr = {4,1,5,2,3};
-int size = arr.size();
+// vector<int>arr = {4,1,5,2,3};
+// int size = arr.size();
 
-for(int i = 1; i<size; i++){ // O(n^2)
-    int curr = arr[i];
-    int prev = i - 1;
+// for(int i = 1; i<size; i++){ // O(n^2)
+//     int curr = arr[i];
+//     int prev = i - 1;
 
-    while(prev >= 0 && arr[prev] > curr){
-        arr[prev + 1] = arr[prev];
-        prev--;
-    }
-    arr[prev + 1] = curr;
-}
+//     while(prev >= 0 && arr[prev] > curr){  // Decreasing Order: arr[prev] < curr
+//         arr[prev + 1] = arr[prev];
+//         prev--;
+//     }
+//     arr[prev + 1] = curr;
+// }
 
-for(int i = 0; i<size; i++){
-    cout<<arr[i]<<" ";
-}
+// for(int i = 0; i<size; i++){
+//     cout<<arr[i]<<" ";
+// }
 
 return 0;
 }
