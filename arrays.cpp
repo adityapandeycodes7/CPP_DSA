@@ -754,7 +754,7 @@ int main () {
 
 
 
-//----------> Instertion Sort:
+//----------> Insertion Sort:
 
 // vector<int>arr = {4,1,5,2,3};
 // int size = arr.size();
@@ -773,6 +773,10 @@ int main () {
 // for(int i = 0; i<size; i++){
 //     cout<<arr[i]<<" ";
 // }
+
+
+
+//---------> Sort an Array with 0's, 1's and 2's
 
 return 0;
 }
