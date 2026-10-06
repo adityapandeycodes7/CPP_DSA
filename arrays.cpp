@@ -776,7 +776,41 @@ int main () {
 
 
 
-//---------> Sort an Array with 0's, 1's and 2's
+//---------> Sort an Array with 0's, 1's and 2's:
+//-----> Bruteforce Approach:
+// vector<int>arr = {1,0,2,1,1,0,2,0,2,2};
+// sort(arr.begin(), arr.end());  // O(nLogn)
+// int size = arr.size();
 
+
+
+// //------> Optimized Solution: O(n)
+
+// int countZero = 0;
+// int countOne = 0;
+// int countTwo = 0;
+
+// for(int i = 0; i<size; i++){
+// if(arr[i] == 0){
+//     countZero++;
+// }
+// else if(arr[i] == 1){
+//     countOne++;
+// }
+// else{
+//     countTwo++;
+// }
+// }
+
+// for(int i = 0; i<countZero; i++){
+// cout<<0;
+// }
+
+// for(int i = 0; i<countOne; i++){
+// cout<<1;
+// }
+// for(int i = 0; i<countTwo; i++){
+// cout<<2;
+// }
 return 0;
 }
