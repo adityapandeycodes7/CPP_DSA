@@ -816,32 +816,54 @@ int main () {
 
 
 
-//---------> Optimal Solution : Dutch National Flag Algorithm:
+//---------> Optimal Solution : Dutch National Flag Algorithm (Leetcode 75):
+//---->Time Complexity: O(n)
+//---->Space Complexity: O(1)
 
-vector<int>arr = {2,0,2,1,1,0};
-int size = arr.size();
+// vector<int>arr = {2,0,2,1,1,0};
+// int size = arr.size();
 
-int mid = 0;
-int low = 0;
-int high = size - 1;
+// int mid = 0;
+// int low = 0;
+// int high = size - 1;
 
-while(mid <= high){
-    if(arr[mid] == 0){
-        swap(arr[mid], arr[low]);
-            mid++;
-            low++;
-    }
-    else if(arr[mid] == 1){
-        mid++;
-    }
-    else{
-        swap(arr[mid], arr[high]);
-        high--;
-    }
+// while(mid <= high){
+//     if(arr[mid] == 0){
+//         swap(arr[mid], arr[low]);
+//             mid++;
+//             low++;
+//     }
+//     else if(arr[mid] == 1){
+//         mid++;
+//     }
+//     else{
+//         swap(arr[mid], arr[high]);
+//         high--;
+//     }
+// }
+// for(int i = 0; i<size; i++){
+//     cout<<arr[i]<<" ";
+// }
+
+
+
+
+//----------> Merge Sorted Array : (Leetcode 88):
+ vector<int>nums1 = {1,2,3,0,0,0};
+ int m = 3;            
+ vector<int>nums2 = {2,5,6};            
+ int n = 3;
+ int count = 0;
+        for(int i = 0; i < m+n; i++){
+            if(i>=m){
+              nums1[i] = nums2[count];
+              count++;
+            }
+        }
+        sort(nums1.begin(), nums1.end());
+    
+ for(int i = 0; i<m+n; i++){
+    cout<<nums1[i]<<" ";
 }
-for(int i = 0; i<size; i++){
-    cout<<arr[i]<<" ";
-}
-
 return 0;
 }
