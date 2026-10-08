@@ -849,20 +849,53 @@ int main () {
 
 
 //----------> Merge Sorted Array : (Leetcode 88):
+//  vector<int>nums1 = {1,2,3,0,0,0};
+//  int m = 3;            
+//  vector<int>nums2 = {2,5,6};            
+//  int n = 3;
+//  int count = 0;
+//         for(int i = 0; i < m+n; i++){
+//             if(i>=m){
+//               nums1[i] = nums2[count];
+//               count++;
+//             }
+//         }
+//         sort(nums1.begin(), nums1.end());
+    
+//  for(int i = 0; i<m+n; i++){
+//     cout<<nums1[i]<<" ";
+// }
+
+
+
+//-----------> Optimal Solution: (Leetcode 88):
  vector<int>nums1 = {1,2,3,0,0,0};
  int m = 3;            
  vector<int>nums2 = {2,5,6};            
  int n = 3;
- int count = 0;
-        for(int i = 0; i < m+n; i++){
-            if(i>=m){
-              nums1[i] = nums2[count];
-              count++;
-            }
-        }
-        sort(nums1.begin(), nums1.end());
-    
- for(int i = 0; i<m+n; i++){
+ int idx = m+n-1;
+ int i = m-1;
+ int j = n-1;
+
+ while(i>=0 && j>=0){
+  if(nums2[j] >= nums1[i]){
+    nums1[idx] = nums2[j];
+    idx--;
+    j--;
+  }
+  else{
+    nums1[idx] = nums1[i];
+    idx--;
+    i--;
+  }
+ }
+
+while(j >= 0){
+  nums1[idx] = nums2[j];
+  j--;
+  idx--; 
+}
+  for(int i = 0; i<m+n; i++){
     cout<<nums1[i]<<" ";
 }
 return 0;
