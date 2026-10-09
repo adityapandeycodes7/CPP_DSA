@@ -869,34 +869,87 @@ int main () {
 
 
 //-----------> Optimal Solution: (Leetcode 88):
- vector<int>nums1 = {1,2,3,0,0,0};
- int m = 3;            
- vector<int>nums2 = {2,5,6};            
- int n = 3;
- int idx = m+n-1;
- int i = m-1;
- int j = n-1;
+//  vector<int>nums1 = {1,2,3,0,0,0};
+//  int m = 3;            
+//  vector<int>nums2 = {2,5,6};            
+//  int n = 3;
+//  int idx = m+n-1;
+//  int i = m-1;
+//  int j = n-1;
 
- while(i>=0 && j>=0){
-  if(nums2[j] >= nums1[i]){
-    nums1[idx] = nums2[j];
-    idx--;
-    j--;
-  }
-  else{
-    nums1[idx] = nums1[i];
-    idx--;
-    i--;
-  }
- }
+//  while(i>=0 && j>=0){
+//   if(nums2[j] >= nums1[i]){
+//     nums1[idx] = nums2[j];
+//     idx--;
+//     j--;
+//   }
+//   else{
+//     nums1[idx] = nums1[i];
+//     idx--;
+//     i--;
+//   }
+//  }
 
-while(j >= 0){
-  nums1[idx] = nums2[j];
-  j--;
-  idx--; 
+// while(j >= 0){
+//   nums1[idx] = nums2[j];
+//   j--;
+//   idx--; 
+// }
+//   for(int i = 0; i<m+n; i++){
+//     cout<<nums1[i]<<" ";
+// }
+
+
+
+
+//-----------> Next Permutation: (Leetcode 31):
+
+vector<int>nums = {1,2,3,6,5,4};
+int size = nums.size();
+int pivot = -1;
+
+for(int i = size-2; i>=0; i--){
+   if(nums[i] < nums[i+1]){
+    pivot = i;
+    break;
+   }
 }
-  for(int i = 0; i<m+n; i++){
-    cout<<nums1[i]<<" ";
+
+if(pivot == -1){
+  // reverse(nums.begin(), nums.end());
+  
+  // or
+
+  int start = 0;
+  int end = size-1;
+  
+  while(start < end){ 
+    swap(nums[start], nums[end]);
+    start++;
+    end--; 
+  }
 }
+
+
+for(int i = size-1; i>pivot; i--){
+  if(nums[i] > nums[pivot]){
+    swap(nums[i], nums[pivot]);
+    break;
+  }
+}
+
+  int start = pivot + 1;
+  int end = size - 1;
+  
+  while(start < end){
+    swap(nums[start], nums[end]);
+    start++;
+    end--; 
+  }
+
+  for(int i = 0; i<size; i++){
+    cout<<nums[i]<<" ";
+}
+
 return 0;
 }
