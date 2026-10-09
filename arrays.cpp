@@ -903,7 +903,9 @@ int main () {
 
 
 //-----------> Next Permutation: (Leetcode 31):
-
+//---->Optimal Solution:
+//Time Complexity : O(n);
+//Space Complexity: O(1);
 vector<int>nums = {1,2,3,6,5,4};
 int size = nums.size();
 int pivot = -1;
@@ -937,6 +939,10 @@ for(int i = size-1; i>pivot; i--){
     break;
   }
 }
+
+// reverse(nums.begin() + pivot+1, nums.end());
+  
+  // or
 
   int start = pivot + 1;
   int end = size - 1;
