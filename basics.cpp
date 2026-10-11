@@ -1027,11 +1027,13 @@ int main () {
 // vect.push_back(2);
 // vect.push_back(3);
 // vect.push_back(4);
+// // cout<<vect.size()<<endl;
+// // cout<<vect.capacity()<<endl;
 
-// cout<<vect.size()<<endl;
-// cout<<vect.capacity()<<endl;
-
-
+// vector<int>vect1(vect); // Initalizes the vect1 with the values of vect
+// for(int val : vect1){
+//     cout<< val<< " ";
+// }
 
 
 // Time Complexity And Space Complexity:
