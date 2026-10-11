@@ -999,7 +999,7 @@ int main () {
 //---------->Syntax:
 //vector<int>vec;
 //vector<int>vec(5,0);
-// vector<int>vec = {1,2,3,4,5,6};
+vector<int>vec = {1,2,3,4,5,6};
 
 //--------->For each loop:
 
@@ -1035,6 +1035,20 @@ int main () {
 //     cout<< val<< " ";
 // }
 
+//----> Vector costly functions: O(n):
+
+// vec.erase(vec.begin() + 2);
+// cout<<vec[2]<<endl;
+
+// vec.insert(vec.begin() + 2, 3);
+// cout<<vec[2]<<endl;
+
+vec.clear();
+for(int val : vec){
+    cout<< val<< " ";
+}
+
+cout<< vec.empty();
 
 // Time Complexity And Space Complexity:
 
