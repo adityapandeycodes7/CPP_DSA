@@ -999,7 +999,7 @@ int main () {
 //---------->Syntax:
 //vector<int>vec;
 //vector<int>vec(5,0);
-vector<int>vec = {1,2,3,4,5,6};
+// vector<int>vec = {1,2,3,4,5,6};
 
 //--------->For each loop:
 
@@ -1053,12 +1053,25 @@ vector<int>vec = {1,2,3,4,5,6};
 
 
 //------>Iterators (in vectors):
-//begin()
-cout<<*(vec.begin())<<endl;
+vector<int>vec = {1,2,3,4,5,6};
 
-//end()
-cout<<*(vec.end())<<endl;
+// //---->begin()
+// cout<<*(vec.begin())<<endl; //Pointing the value at the "0th" index
 
+// //---->end()
+// cout<<*(vec.end())<<endl; //Pointing the value at the "nth" index
+
+
+//Iterators:
+
+vector<int>::iterator it;
+for(it = vec.begin(); it != vec.end(); it++){  //Forward
+    cout<< *(it) <<" ";
+}
+cout<<endl;
+for(auto it = vec.rbegin(); it != vec.rend(); it++){  //Forward
+    cout<< *(it) <<" ";
+}
 
 // Time Complexity And Space Complexity:
 
