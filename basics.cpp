@@ -1043,12 +1043,22 @@ vector<int>vec = {1,2,3,4,5,6};
 // vec.insert(vec.begin() + 2, 3);
 // cout<<vec[2]<<endl;
 
-vec.clear();
-for(int val : vec){
-    cout<< val<< " ";
-}
+// vec.clear();
+// for(int val : vec){
+//     cout<< val<< " ";
+// }
 
-cout<< vec.empty();
+// cout<< vec.empty();
+
+
+
+//------>Iterators (in vectors):
+//begin()
+cout<<*(vec.begin())<<endl;
+
+//end()
+cout<<*(vec.end())<<endl;
+
 
 // Time Complexity And Space Complexity:
 
