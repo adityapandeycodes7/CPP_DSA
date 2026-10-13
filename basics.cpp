@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <list>
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -993,7 +994,7 @@ int main () {
 
 
 
-
+//_____C++ STL (Standard Template Liabrary):
 //________________Vectors:
 
 //---------->Syntax:
@@ -1053,7 +1054,7 @@ int main () {
 
 
 //------>Iterators (in vectors):
-vector<int>vec = {1,2,3,4,5,6};
+// vector<int>vec = {1,2,3,4,5,6};
 
 // //---->begin()
 // cout<<*(vec.begin())<<endl; //Pointing the value at the "0th" index
@@ -1064,14 +1065,37 @@ vector<int>vec = {1,2,3,4,5,6};
 
 //Iterators:
 
-vector<int>::iterator it;
-for(it = vec.begin(); it != vec.end(); it++){  //Forward
-    cout<< *(it) <<" ";
+// vector<int>::iterator it;
+// for(it = vec.begin(); it != vec.end(); it++){  //Forward
+//     cout<< *(it) <<" ";
+// }
+// cout<<endl;
+// for(auto it = vec.rbegin(); it != vec.rend(); it++){  //Forward
+//     cout<< *(it) <<" ";
+// }
+
+
+//------> List:
+
+list<int> l; //Act as a doubly Linked list
+
+l.push_back(4);
+l.push_back(6);
+l.push_front(2);
+l.push_front(0);
+
+for(int val : l){
+    cout<<val<<" ";
 }
 cout<<endl;
-for(auto it = vec.rbegin(); it != vec.rend(); it++){  //Forward
-    cout<< *(it) <<" ";
+
+l.pop_back();
+l.pop_front();
+
+for(int val : l){
+    cout<<val<<" ";
 }
+cout<<endl;
 
 // Time Complexity And Space Complexity:
 
