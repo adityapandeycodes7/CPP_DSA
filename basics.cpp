@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <deque>
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -1077,22 +1078,31 @@ int main () {
 
 //------> List:
 
-list<int> l; //Act as a doubly Linked list
+// list<int> l; //Act as a doubly Linked list
 
-l.push_back(4);
-l.push_back(6);
-l.push_front(2);
-l.push_front(0);
+// l.push_back(4);
+// l.push_back(6);
+// l.push_front(2);
+// l.push_front(0);
 
-for(int val : l){
-    cout<<val<<" ";
-}
-cout<<endl;
+// for(int val : l){
+//     cout<<val<<" ";
+// }
+// cout<<endl;
 
-l.pop_back();
-l.pop_front();
+// l.pop_back();
+// l.pop_front();
 
-for(int val : l){
+// for(int val : l){
+//     cout<<val<<" ";
+// }
+// cout<<endl;
+
+
+//-----> Deque:
+deque<int> d = {1,2,3,4,5,6}; //Internally deques are implemented as the dynamic arrays: random access is possible:
+
+for(int val : d){
     cout<<val<<" ";
 }
 cout<<endl;
@@ -1136,7 +1146,7 @@ cout<<endl;
 
 
 
-//-----------------> Caclculate Pow(x,n): (Leetcode 50):
+//-----------------> Calculate Pow(x,n): (Leetcode 50):
 
 // double x = 4; 
 // int n = 2;
