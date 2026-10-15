@@ -1100,12 +1100,38 @@ int main () {
 
 
 //-----> Deque:
-deque<int> d = {1,2,3,4,5,6}; //Internally deques are implemented as the dynamic arrays: random access is possible:
+// deque<int> d = {1,2,3,4,5,6}; //Internally deques are implemented as the dynamic arrays: random access is possible:
 
-for(int val : d){
-    cout<<val<<" ";
-}
-cout<<endl;
+// for(int val : d){
+//     cout<<val<<" ";
+// }
+// cout<<endl;
+
+
+//---------> Pairs: (parts of the CPP Utility Liabrary):
+
+pair<int, int> p = {1,6};
+cout<<p.first<<endl;
+cout<<p.second<<endl;
+
+pair<string, int> sI = {"DSA", 7};
+cout<<sI.first<<endl;
+cout<<sI.second<<endl;
+
+pair<int, pair<char, int> > pP = {4, {'A', 6}};
+cout<<pP.first<<endl;
+cout<<pP.second.first<<endl;
+cout<<pP.second.second<<endl;
+
+vector<pair<int, int>> vecPair = {{1,2}, {3,4}, {5,6}, {7,8}};
+
+vecPair.push_back({9,10});  //Instert
+vecPair.emplace_back(11,12);  //In Place Objects Create 
+
+for( pair<int, int> val : vecPair){  // or auto val
+   cout<<val.first<<" "<<val.second<< endl;
+} 
+
 
 // Time Complexity And Space Complexity:
 
