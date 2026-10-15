@@ -2,6 +2,7 @@
 #include <vector>
 #include <list>
 #include <deque>
+#include <stack>
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -1110,27 +1111,50 @@ int main () {
 
 //---------> Pairs: (parts of the CPP Utility Liabrary):
 
-pair<int, int> p = {1,6};
-cout<<p.first<<endl;
-cout<<p.second<<endl;
+// pair<int, int> p = {1,6};
+// cout<<p.first<<endl;
+// cout<<p.second<<endl;
 
-pair<string, int> sI = {"DSA", 7};
-cout<<sI.first<<endl;
-cout<<sI.second<<endl;
+// pair<string, int> sI = {"DSA", 7};
+// cout<<sI.first<<endl;
+// cout<<sI.second<<endl;
 
-pair<int, pair<char, int> > pP = {4, {'A', 6}};
-cout<<pP.first<<endl;
-cout<<pP.second.first<<endl;
-cout<<pP.second.second<<endl;
+// pair<int, pair<char, int> > pP = {4, {'A', 6}};
+// cout<<pP.first<<endl;
+// cout<<pP.second.first<<endl;
+// cout<<pP.second.second<<endl;
 
-vector<pair<int, int>> vecPair = {{1,2}, {3,4}, {5,6}, {7,8}};
+// vector<pair<int, int>> vecPair = {{1,2}, {3,4}, {5,6}, {7,8}};
 
-vecPair.push_back({9,10});  //Instert
-vecPair.emplace_back(11,12);  //In Place Objects Create 
+// vecPair.push_back({9,10});  //Instert
+// vecPair.emplace_back(11,12);  //In Place Objects Create 
 
-for( pair<int, int> val : vecPair){  // or auto val
-   cout<<val.first<<" "<<val.second<< endl;
-} 
+// for( pair<int, int> val : vecPair){  // or auto val
+//    cout<<val.first<<" "<<val.second<< endl;
+// } 
+
+
+
+
+//----------> Stacks:
+stack <int>st;
+st.push(1);
+st.push(2);
+st.push(3);
+st.push(4);
+
+cout<<"size of the stack st is: "<<st.size()<<endl;
+
+stack<int> st2;
+st2.swap(st);
+
+cout<<"After swapping, size of the stack st2 is: "<<st2.size()<<endl;
+cout<<"After Swapping, size of the stack st is: "<<st.size()<<endl;
+
+while(!st2.empty()){
+cout<<st2.top()<<endl;
+st2.pop();
+}
 
 
 // Time Complexity And Space Complexity:
