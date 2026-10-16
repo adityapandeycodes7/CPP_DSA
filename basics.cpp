@@ -1162,21 +1162,52 @@ int main () {
 
 //----------> Queues: 
 
-queue<int> q;
+// queue<int> q;
 
-q.push(1);
-q.push(2);
-q.push(3);
-q.push(4);
-q.push(5);
-q.push(6);
+// q.push(1);
+// q.push(2);
+// q.push(3);
+// q.push(4);
+// q.push(5);
+// q.push(6);
 
-while(!q.empty()){
-cout<<q.front()<<" ";
-q.pop();
+// while(!q.empty()){
+// cout<<q.front()<<" ";
+// q.pop();
+// }
+
+
+//--------> Priority Queue:
+
+priority_queue<int> pQ; // Arranges the elements according the highest priority, like the greater value will be at the front by default
+pQ.push(2);
+pQ.push(4);
+pQ.push(1);
+pQ.push(5);
+pQ.push(3);
+pQ.push(6);
+
+while(!pQ.empty()){
+    cout<<pQ.top()<<" ";
+    pQ.pop();
 }
+cout<<endl;
 
 
+//-----> Reverse order priority Queue:
+priority_queue<int, vector<int>, greater<int>> rPQ; // Arranges the elements according the highest priority, like the greater value will be at the front by default
+rPQ.push(2);
+rPQ.push(4);
+rPQ.push(1);
+rPQ.push(5);
+rPQ.push(3);
+rPQ.push(6);
+
+while(!rPQ.empty()){
+    cout<<rPQ.top()<<" ";
+    rPQ.pop();
+}
+cout<<endl;
 
 
 // Time Complexity And Space Complexity:
