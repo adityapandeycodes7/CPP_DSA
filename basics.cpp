@@ -3,6 +3,7 @@
 #include <list>
 #include <deque>
 #include <stack>
+#include <queue>
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -1137,24 +1138,45 @@ int main () {
 
 
 //----------> Stacks:
-stack <int>st;
-st.push(1);
-st.push(2);
-st.push(3);
-st.push(4);
+// stack <int>st;
+// st.push(1);
+// st.push(2);
+// st.push(3);
+// st.push(4);
 
-cout<<"size of the stack st is: "<<st.size()<<endl;
+// cout<<"size of the stack st is: "<<st.size()<<endl;
 
-stack<int> st2;
-st2.swap(st);
+// stack<int> st2;
+// st2.swap(st);
 
-cout<<"After swapping, size of the stack st2 is: "<<st2.size()<<endl;
-cout<<"After Swapping, size of the stack st is: "<<st.size()<<endl;
+// cout<<"After swapping, size of the stack st2 is: "<<st2.size()<<endl;
+// cout<<"After Swapping, size of the stack st is: "<<st.size()<<endl;
 
-while(!st2.empty()){
-cout<<st2.top()<<endl;
-st2.pop();
+// while(!st2.empty()){
+// cout<<st2.top()<<endl;
+// st2.pop();
+// }
+
+
+
+
+//----------> Queues: 
+
+queue<int> q;
+
+q.push(1);
+q.push(2);
+q.push(3);
+q.push(4);
+q.push(5);
+q.push(6);
+
+while(!q.empty()){
+cout<<q.front()<<" ";
+q.pop();
 }
+
+
 
 
 // Time Complexity And Space Complexity:
