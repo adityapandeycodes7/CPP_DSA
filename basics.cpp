@@ -4,6 +4,7 @@
 #include <deque>
 #include <stack>
 #include <queue>
+#include <map>
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -1179,35 +1180,67 @@ int main () {
 
 //--------> Priority Queue:
 
-priority_queue<int> pQ; // Arranges the elements according the highest priority, like the greater value will be at the front by default
-pQ.push(2);
-pQ.push(4);
-pQ.push(1);
-pQ.push(5);
-pQ.push(3);
-pQ.push(6);
+// priority_queue<int> pQ; // Arranges the elements according the highest priority, like the greater value will be at the front by default
+// pQ.push(2);
+// pQ.push(4);
+// pQ.push(1);
+// pQ.push(5);
+// pQ.push(3);
+// pQ.push(6);
 
-while(!pQ.empty()){
-    cout<<pQ.top()<<" ";
-    pQ.pop();
+// while(!pQ.empty()){
+//     cout<<pQ.top()<<" ";
+//     pQ.pop();
+// }
+// cout<<endl;
+
+
+// //-----> Reverse order priority Queue:
+// priority_queue<int, vector<int>, greater<int>> rPQ; // Arranges the elements according the highest priority, like the greater value will be at the front by default
+// rPQ.push(2);
+// rPQ.push(4);
+// rPQ.push(1);
+// rPQ.push(5);
+// rPQ.push(3);
+// rPQ.push(6);
+
+// while(!rPQ.empty()){
+//     cout<<rPQ.top()<<" ";
+//     rPQ.pop();
+// }
+// cout<<endl;
+
+
+
+//-------> Map:
+
+map<string, int> m;
+m["Laptop"] = 20; 
+m["Tv"] = 50;
+m["Ac"] = 40;
+m["Smart Phones"] = 60;
+
+m.insert({"Camera", 40});
+m.emplace("Washing Machine", 45);
+
+m.erase("Tv");
+for(pair<string, int> p : m){  //or auto <string, int>
+
+    cout<<p.first<< " "<<p.second<< endl;
 }
-cout<<endl;
 
+cout<<"count is : "<<m.count("Laptop")<<endl;
+cout<<"value of Key laptop is : "<<m["Laptop"]<<endl;
 
-//-----> Reverse order priority Queue:
-priority_queue<int, vector<int>, greater<int>> rPQ; // Arranges the elements according the highest priority, like the greater value will be at the front by default
-rPQ.push(2);
-rPQ.push(4);
-rPQ.push(1);
-rPQ.push(5);
-rPQ.push(3);
-rPQ.push(6);
-
-while(!rPQ.empty()){
-    cout<<rPQ.top()<<" ";
-    rPQ.pop();
+if(m.find("Camera") != m.end()){
+    cout<<"the Camera key is Found"<<endl;
 }
-cout<<endl;
+else{
+    cout<<"the Camera key is Not Found"<<endl;
+}
+
+cout<<m.size()<<endl;
+cout<<m.empty()<<endl;
 
 
 // Time Complexity And Space Complexity:
