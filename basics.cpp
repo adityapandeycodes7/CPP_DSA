@@ -1214,34 +1214,49 @@ int main () {
 
 //-------> Map:
 
-map<string, int> m;
-m["Laptop"] = 20; 
-m["Tv"] = 50;
-m["Ac"] = 40;
-m["Smart Phones"] = 60;
+// map<string, int> m;
+// m["Laptop"] = 20; 
+// m["Tv"] = 50;
+// m["Ac"] = 40;
+// m["Smart Phones"] = 60;
 
-m.insert({"Camera", 40});
-m.emplace("Washing Machine", 45);
+// m.insert({"Camera", 40});
+// m.emplace("Washing Machine", 45);
 
-m.erase("Tv");
-for(pair<string, int> p : m){  //or auto <string, int>
+// m.erase("Tv");
+// for(pair<string, int> p : m){  //or auto <string, int>
 
-    cout<<p.first<< " "<<p.second<< endl;
+//     cout<<p.first<< " "<<p.second<< endl;
+// }
+
+// cout<<"count is : "<<m.count("Laptop")<<endl;
+// cout<<"value of Key laptop is : "<<m["Laptop"]<<endl;
+
+// if(m.find("Camera") != m.end()){
+//     cout<<"the Camera key is Found"<<endl;
+// }
+// else{
+//     cout<<"the Camera key is Not Found"<<endl;
+// }
+
+// cout<<m.size()<<endl;
+// cout<<m.empty()<<endl;
+
+
+
+//-------> Multimap:
+multimap<string, int> mM;
+
+mM.emplace("laptop", 40);
+mM.emplace("laptop", 40);
+mM.emplace("laptop", 40);
+mM.emplace("laptop", 40);
+mM.emplace("laptop", 40);
+
+mM.erase(mM.find("laptop"));
+for(auto p:mM){
+    cout<<p.first<<" "<<p.second<<endl;
 }
-
-cout<<"count is : "<<m.count("Laptop")<<endl;
-cout<<"value of Key laptop is : "<<m["Laptop"]<<endl;
-
-if(m.find("Camera") != m.end()){
-    cout<<"the Camera key is Found"<<endl;
-}
-else{
-    cout<<"the Camera key is Not Found"<<endl;
-}
-
-cout<<m.size()<<endl;
-cout<<m.empty()<<endl;
-
 
 // Time Complexity And Space Complexity:
 
