@@ -1262,16 +1262,16 @@ int main () {
 
 //-------> UnOrdered Map: Keys are arranged randomly without getting sorted:
 
-unordered_map<string, int> uOM;  // Time Complexity is usually O(1)
+// unordered_map<string, int> uOM;  // Time Complexity is usually O(1)
 
-uOM.emplace("laptop", 70);
-uOM.emplace("Tv", 60);
-uOM.emplace("Watches", 45);
-uOM.emplace("Camera", 40);
-uOM.emplace("Washing Machine", 20);
- for(auto p: uOM){
-    cout<<p.first<<" "<<p.second<<endl;
-}
+// uOM.emplace("laptop", 70);
+// uOM.emplace("Tv", 60);
+// uOM.emplace("Watches", 45);
+// uOM.emplace("Camera", 40);
+// uOM.emplace("Washing Machine", 20);
+//  for(auto p: uOM){
+//     cout<<p.first<<" "<<p.second<<endl;
+// }
 
 
 // Time Complexity And Space Complexity:
