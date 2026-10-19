@@ -6,6 +6,7 @@
 #include <queue>
 #include <map>
 #include <unordered_map>
+#include <set>  
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -1272,6 +1273,28 @@ int main () {
 //  for(auto p: uOM){
 //     cout<<p.first<<" "<<p.second<<endl;
 // }
+
+//-------> sets:
+
+set<int> s;
+
+s.insert(1);
+s.insert(2);
+s.insert(3);
+s.insert(4);
+s.insert(5);
+s.insert(6);
+
+set<int> s1;
+
+s.insert(2);
+s.insert(7);
+s.insert(4);
+s.insert(8);
+
+ for(auto val: s){
+    cout<<val<<" ";
+}
 
 
 // Time Complexity And Space Complexity:
