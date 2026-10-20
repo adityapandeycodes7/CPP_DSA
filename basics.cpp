@@ -1321,6 +1321,27 @@ int main () {
 // }
 
 
+//-------> UnOrdered Sets: All Elements are arranged randomly:
+
+unordered_set<int> uOS;
+
+uOS.insert(1);
+uOS.insert(2);
+uOS.insert(3);
+uOS.insert(4);
+uOS.insert(5);
+uOS.insert(6);
+
+uOS.insert(2);
+uOS.insert(7);
+uOS.insert(4);
+uOS.insert(8);
+
+for(auto val: uOS){
+    cout<<val<<" ";
+}
+
+
 
 // Time Complexity And Space Complexity:
 
