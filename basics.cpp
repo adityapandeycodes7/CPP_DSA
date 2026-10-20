@@ -7,6 +7,7 @@
 #include <map>
 #include <unordered_map>
 #include <set>  
+#include <unordered_set>
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -1276,25 +1277,49 @@ int main () {
 
 //-------> sets:
 
-set<int> s;
+// set<int> s;
 
-s.insert(1);
-s.insert(2);
-s.insert(3);
-s.insert(4);
-s.insert(5);
-s.insert(6);
+// s.insert(1);
+// s.insert(2);
+// s.insert(3);
+// s.insert(4);
+// s.insert(5);
+// s.insert(6);
 
-set<int> s1;
+// s.insert(2);
+// s.insert(7);
+// s.insert(4);
+// s.insert(8);
 
-s.insert(2);
-s.insert(7);
-s.insert(4);
-s.insert(8);
+// for(auto val: s){
+//     cout<<val<<" ";
+// }
+// cout<<endl;
+// cout<<"size of the set is: "<<s.size()<<endl;
+// cout<<"Lower bound: "<<*(s.lower_bound(4))<<endl;
+// cout<<"Lower bound: "<<*(s.upper_bound(4))<<endl;
 
- for(auto val: s){
-    cout<<val<<" ";
-}
+
+//-----> Multiset: Duplicate Values are allowed in the set
+
+// multiset<int> mS;
+
+// mS.insert(1);
+// mS.insert(2);
+// mS.insert(3);
+// mS.insert(4);
+// mS.insert(5);
+// mS.insert(6);
+
+// mS.insert(2);
+// mS.insert(7);
+// mS.insert(4);
+// mS.insert(8);
+
+// for(auto val: mS){
+//     cout<<val<<" ";
+// }
+
 
 
 // Time Complexity And Space Complexity:
