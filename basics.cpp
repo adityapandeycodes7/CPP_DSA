@@ -8,6 +8,7 @@
 #include <unordered_map>
 #include <set>  
 #include <unordered_set>
+#include <algorithm>
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -1323,24 +1324,54 @@ int main () {
 
 //-------> UnOrdered Sets: All Elements are arranged randomly:
 
-unordered_set<int> uOS;
+// unordered_set<int> uOS;
 
-uOS.insert(1);
-uOS.insert(2);
-uOS.insert(3);
-uOS.insert(4);
-uOS.insert(5);
-uOS.insert(6);
+// uOS.insert(1);
+// uOS.insert(2);
+// uOS.insert(3);
+// uOS.insert(4);
+// uOS.insert(5);
+// uOS.insert(6);
 
-uOS.insert(2);
-uOS.insert(7);
-uOS.insert(4);
-uOS.insert(8);
+// uOS.insert(2);
+// uOS.insert(7);
+// uOS.insert(4);
+// uOS.insert(8);
 
-for(auto val: uOS){
-    cout<<val<<" ";
+// for(auto val: uOS){
+//     cout<<val<<" ";
+// }
+
+
+
+//-------> Algorithms:
+
+//-----> Sorting:
+
+// int arr[] = {4,6,2,3,1,5};
+// int size = sizeof(arr)/sizeof(int);
+// sort(arr, arr + size);
+
+// for(int i = 0; i<size; i++){
+//     cout<< arr[i]<<" ";
+// }
+// cout<< endl;
+
+//----> For Vector:
+
+vector<int> vec = {4,6,2,3,1,5};
+int size = vec.size();
+
+sort(vec.begin(), vec.end());
+
+//descending Order:
+// sort(vec.begin(), vec.end(), greater<int>());
+
+
+for(int val : vec){
+    cout<< val <<" ";
 }
-
+cout<< endl;
 
 
 // Time Complexity And Space Complexity:
