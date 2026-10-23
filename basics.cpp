@@ -1359,20 +1359,27 @@ int main () {
 
 //----> For Vector:
 
-vector<int> vec = {4,6,2,3,1,5};
-int size = vec.size();
+// vector<int> vec = {4,6,2,3,1,5};
+// int size = vec.size();
 
-sort(vec.begin(), vec.end());
+// sort(vec.begin(), vec.end());
 
 //descending Order:
 // sort(vec.begin(), vec.end(), greater<int>());
 
+// for(int val : vec){
+//     cout<< val <<" ";
+// }
+// cout<< endl;
 
-for(int val : vec){
-    cout<< val <<" ";
+
+//---------> Sorting Pairs:
+vector<pair<int, int>> vP = {{1,2},{3,4},{2,4},{5,6}};
+sort(vP.begin(), vP.end());
+
+for(auto val : vP){ // By default, the first value of the pair is compared
+    cout<<val.first<<" "<<val.second<<endl;
 }
-cout<< endl;
-
 
 // Time Complexity And Space Complexity:
 
