@@ -274,6 +274,14 @@ using namespace std;
 // }
 
 
+// Sorting Algorithms: Custom Sorting:
+
+bool comparator(pair<int, int>p1 , pair<int, int>p2) {
+ if(p1.second < p2.second) return true;
+ else return false;
+}
+
+
 int main () {
 
 
@@ -1373,13 +1381,25 @@ int main () {
 // cout<< endl;
 
 
-//---------> Sorting Pairs:
-vector<pair<int, int>> vP = {{1,2},{3,4},{2,4},{5,6}};
-sort(vP.begin(), vP.end());
+//---------> Sorting Pairs: Default sorting:
+// vector<pair<int, int>> vP = {{1,2},{3,4},{2,4},{5,6}};
+// sort(vP.begin(), vP.end());
 
-for(auto val : vP){ // By default, the first value of the pair is compared
+// for(auto val : vP){ // By default, the first value of the pair is compared
+//     cout<<val.first<<" "<<val.second<<endl;
+// }
+
+// cout<<endl;
+
+//--------> Sorting Pairs: Custom sorting:
+vector<pair<int, int>> vec = {{1,2},{3,4},{2,4},{5,6}};
+sort(vec.begin(), vec.end(), comparator);
+
+for(auto val : vec){ // By default, the first value of the pair is compared
     cout<<val.first<<" "<<val.second<<endl;
 }
+cout<<endl;
+
 
 // Time Complexity And Space Complexity:
 
