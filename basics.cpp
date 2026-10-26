@@ -1430,29 +1430,54 @@ int main () {
 
 
 
-//--------> Next and Previous Permutation Algorithm:
+// //--------> Next and Previous Permutation Algorithm:
 
-string s = "abc";
-next_permutation(s.begin(), s.end());
-cout<<s<<endl;
+// string s = "abc";
+// next_permutation(s.begin(), s.end());
+// cout<<s<<endl;
 
-prev_permutation(s.begin(), s.end());
-cout<<s<<endl;
-
-
-
-//------> Min, Max Algorithm:
-cout<<max(2,6)<<endl; 
-cout<<min(2,6)<<endl; 
+// prev_permutation(s.begin(), s.end());
+// cout<<s<<endl;
 
 
-//------> Swap Algorithm:
-int a = 2;
-int b = 4;
-cout<<"a is: "<<a<<" and b is: "<<b<<endl;
-swap(a,b);
-cout<<"After Swapping, a is: "<<a<<" and b is: "<<b<<endl;
 
+// //------> Min, Max Algorithm:
+// cout<<max(2,6)<<endl; 
+// cout<<min(2,6)<<endl; 
+
+
+// //------> Swap Algorithm:
+// int a = 2;
+// int b = 4;
+// cout<<"a is: "<<a<<" and b is: "<<b<<endl;
+// swap(a,b);
+// cout<<"After Swapping, a is: "<<a<<" and b is: "<<b<<endl;
+
+
+
+//-------> Min, Max Element Algorithm:
+// vector<int> vec = {4,2,5,6,8,7};
+// cout<< *(min_element(vec.begin(), vec.end()))<<endl;
+// cout<< *(max_element(vec.begin(), vec.end()))<<endl;
+
+
+
+
+//-------> Binary Search Algorithm: 
+// vector<int> bSA = {2,4,5,6,7,8};
+// cout<< binary_search(bSA.begin(), bSA.end(), 8)<<endl;
+
+
+
+
+//-------> Builtin pop count: It is used to count the number of 1s in the Number:
+int n = 15;
+long int n1= 15;
+long long int n2= 15;
+
+cout<< __builtin_popcount(n)<<endl; 
+cout<< __builtin_popcountl(n1)<<endl; 
+cout<< __builtin_popcountll(n2)<<endl; 
 
 // Time Complexity And Space Complexity:
 
