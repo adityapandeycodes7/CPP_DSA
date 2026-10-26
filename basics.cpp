@@ -217,7 +217,7 @@ using namespace std;
 // }
 
 
-//---------------------> WAF to print all the unique values of an array:
+// ---------------------> WAF to print all the unique values of an array:
 
 // void uniqueValues(int arr[], int size){
 //   bool checkUnique = false;
@@ -276,13 +276,13 @@ using namespace std;
 
 // Sorting Algorithms: Custom Sorting:
 
-bool comparator(pair<int, int>p1 , pair<int, int>p2) {
- if(p1.second < p2.second) return true;
- if(p1.second > p2.second) return false;
+// bool comparator(pair<int, int>p1 , pair<int, int>p2) {
+//  if(p1.second < p2.second) return true;
+//  if(p1.second > p2.second) return false;
 
- if(p1.first < p2.first) return true;
- else return false;
-}
+//  if(p1.first < p2.first) return true;
+//  else return false;
+// }
 
 
 int main () {
@@ -1395,15 +1395,49 @@ int main () {
 // cout<<endl;
 
 //--------> Sorting Pairs: Custom sorting:
-vector<pair<int, int>> vec = {{1,2},{3,4},{2,4},{5,6}};
-sort(vec.begin(), vec.end(), comparator);
+// vector<pair<int, int>> vec = {{1,2},{3,4},{2,4},{5,6}};
+// sort(vec.begin(), vec.end(), comparator);
 
-for(auto val : vec){ // By default, the first value of the pair is compared
-    cout<<val.first<<" "<<val.second<<endl;
-}
-cout<<endl;
+// for(auto val : vec){ // By default, the first value of the pair is compared
+//     cout<<val.first<<" "<<val.second<<endl;
+// }
+// cout<<endl;
 
 
+
+
+//----------> Reverse Algorithm:
+
+// vector<int> rV = {1,2,3,4,5,6};
+// reverse(rV.begin(), rV.end());
+
+// for(auto val : rV){ // By default, the first value of the pair is compared
+//     cout<<val<<" ";
+// }
+// cout<<endl;
+
+
+// //----> Reverse in a Range:
+
+// vector<int> rRV = {1,2,3,4,5,6};
+
+// reverse(rRV.begin()+1, rRV.begin()+5);
+
+// for(auto val : rRV){ // By default, the first value of the pair is compared
+//     cout<<val<<" ";
+// }
+// cout<<endl;
+
+
+
+//--------> Next and Previous Permutation Algorithm:
+
+string s = "abc";
+next_permutation(s.begin(), s.end());
+cout<<s<<endl;
+
+prev_permutation(s.begin(), s.end());
+cout<<s<<endl;
 // Time Complexity And Space Complexity:
 
 //-----------> Time Complexity:
