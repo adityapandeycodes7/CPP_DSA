@@ -1438,6 +1438,22 @@ cout<<s<<endl;
 
 prev_permutation(s.begin(), s.end());
 cout<<s<<endl;
+
+
+
+//------> Min, Max Algorithm:
+cout<<max(2,6)<<endl; 
+cout<<min(2,6)<<endl; 
+
+
+//------> Swap Algorithm:
+int a = 2;
+int b = 4;
+cout<<"a is: "<<a<<" and b is: "<<b<<endl;
+swap(a,b);
+cout<<"After Swapping, a is: "<<a<<" and b is: "<<b<<endl;
+
+
 // Time Complexity And Space Complexity:
 
 //-----------> Time Complexity:
