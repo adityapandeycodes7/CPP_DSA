@@ -1471,13 +1471,22 @@ int main () {
 
 
 //-------> Builtin pop count: It is used to count the number of 1s in the Number:
-int n = 15;
-long int n1= 15;
-long long int n2= 15;
+// int n = 15;
+// long int n1= 15;
+// long long int n2= 15;
 
-cout<< __builtin_popcount(n)<<endl; 
-cout<< __builtin_popcountl(n1)<<endl; 
-cout<< __builtin_popcountll(n2)<<endl; 
+// cout<< __builtin_popcount(n)<<endl; 
+// cout<< __builtin_popcountl(n1)<<endl; 
+// cout<< __builtin_popcountll(n2)<<endl; 
+
+
+
+
+//_________Strings:
+//--------> Character Array:
+
+char str[] = {'a','b','c','d','\0'};
+cout<<str<<endl;
 
 // Time Complexity And Space Complexity:
 
