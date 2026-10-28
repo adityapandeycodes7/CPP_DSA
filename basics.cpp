@@ -9,6 +9,7 @@
 #include <set>  
 #include <unordered_set>
 #include <algorithm>
+#include <cstring>
 using namespace std;
 
 // ------------------> NOTE :- <-----------------------
@@ -1483,10 +1484,25 @@ int main () {
 
 
 //_________Strings:
-//--------> Character Array:
+// //--------> Character Array:
 
-char str[] = {'a','b','c','d','\0'};
-cout<<str<<endl;
+// char str[] = {'a','b','c','d','\0'};
+// cout<<str<<endl;
+// cout<<"The length of the String is: "<<strlen(str)<<endl;
+
+// char str1[] = "efgh";  //String Literals
+// cout<<str1<<endl;
+// cout<<str1[1]<<endl;  //Constant Pointers
+
+//----> String Inputs;
+
+char str2[20];
+cout<<"Enter a string value: ";
+cin.getline(str2,20, '$');  // cin.getline(str. len, delime?)
+cout<<"The String is: "<<str2<<endl;
+
+
+
 
 // Time Complexity And Space Complexity:
 
