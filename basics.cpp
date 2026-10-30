@@ -1499,8 +1499,11 @@ int main () {
 char str2[20];
 cout<<"Enter a string value: ";
 cin.getline(str2,20, '$');  // cin.getline(str. len, delime?)
-cout<<"The String is: "<<str2<<endl;
+// cout<<"The String is: "<<str2<<endl;
 
+for(char ch : str2){
+    cout<<ch<< "";
+}
 
 
 
