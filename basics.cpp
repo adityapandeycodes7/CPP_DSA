@@ -1530,7 +1530,14 @@ string strCCon = strC1 + strC2; //Concatenation
 cout<<strCCon<<endl;
 
 cout<<(strC1 == strC2)<<endl; //Comparison
+cout<<(strC1 < strC2)<<endl; //Compared Lexicographically
 
+cout<<strCCon.length()<<endl; //string Length
+
+string strIn;
+cout<<"Enter a String Value: ";
+getline(cin, strIn);
+cout<<"Output: "<<strIn<<endl;
 
 // Time Complexity And Space Complexity:
 
