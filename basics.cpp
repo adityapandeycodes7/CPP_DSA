@@ -1508,16 +1508,29 @@ int main () {
 
 //----> Length Of String:
 
-char strL[20];
-cout<<"Enter a string value: ";
-cin.getline(strL, 20);
-int len = 0;
+// char strL[20];
+// cout<<"Enter a string value: ";
+// cin.getline(strL, 20);
+// int len = 0;
 
-for(int i = 0; i< strL[i] != '\0'; i++){
-    len++;
-}
+// for(int i = 0; i< strL[i] != '\0'; i++){
+//     len++;
+// }
 
-cout<<"Length of the string is: "<<len<<endl;
+// cout<<"Length of the string is: "<<len<<endl;
+
+
+
+
+//-------> String Class: Dynamic => Runtime resize:
+
+string strC1 = "Hello ";
+string strC2 = "World";
+string strCCon = strC1 + strC2; //Concatenation
+cout<<strCCon<<endl;
+
+cout<<(strC1 == strC2)<<endl; //Comparison
+
 
 // Time Complexity And Space Complexity:
 
