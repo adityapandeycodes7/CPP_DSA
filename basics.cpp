@@ -1496,16 +1496,28 @@ int main () {
 
 //----> String Inputs;
 
-char str2[20];
-cout<<"Enter a string value: ";
-cin.getline(str2,20, '$');  // cin.getline(str. len, delime?)
-// cout<<"The String is: "<<str2<<endl;
+// char str2[20];
+// cout<<"Enter a string value: ";
 
-for(char ch : str2){
-    cout<<ch<< "";
+// cin.getline(str2,20, '$');  // cin.getline(str. len, delime?)
+// // cout<<"The String is: "<<str2<<endl;
+
+// for(char ch : str2){
+//     cout<<ch<< "";
+// }
+
+//----> Length Of String:
+
+char strL[20];
+cout<<"Enter a string value: ";
+cin.getline(strL, 20);
+int len = 0;
+
+for(int i = 0; i< strL[i] != '\0'; i++){
+    len++;
 }
 
-
+cout<<"Length of the string is: "<<len<<endl;
 
 // Time Complexity And Space Complexity:
 
